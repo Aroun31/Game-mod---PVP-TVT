@@ -4,4 +4,4 @@ By :
 <br/>
 <h1> BriCodeur Team <h1/>
 <br/>
-<h3 align="right" color="#F31400">Aroun le BriCodeur, Mikael Libertis<h3/>
+<h3 align="right" color="#F31400">Aroun le BriCodeur, Mikael Libertis & community Arma<h3/>
