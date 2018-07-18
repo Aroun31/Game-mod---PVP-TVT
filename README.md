@@ -2,6 +2,6 @@ Game-mod - PVP-TVT
 <br/>
 By :
 <br/>
-<h2> BriCodeur Team <h2/>
+<h1> BriCodeur Team <h1/>
 <br/>
-<h1 align="right" color="#F31400">Aroun le BriCodeur, Mikael Libertis<h1/>
+<h3 align="right" color="#F31400">Aroun le BriCodeur, Mikael Libertis<h3/>
