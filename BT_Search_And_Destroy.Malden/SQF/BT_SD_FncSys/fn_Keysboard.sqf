@@ -52,7 +52,7 @@
             if (_shift) then [{
                 _handled = []spawn BT_fnc_Buy_Vehicles;
               },{
-                hintSilent "menu joueur prochainement...\nOu pas... ça dépend si tu es sage";
+                hintSilent "menu joueur prochainement...\nOu pas... ça dépend si tu es sage\nMission by :\n* Aroun Le BriCodeur *\n{ DEV'Arma3France - BriCodeur Team }";
             }];
 
         	};

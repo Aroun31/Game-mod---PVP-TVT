@@ -8,7 +8,7 @@ class EditorData
 	toggles=97;
 	class ItemIDProvider
 	{
-		nextID=249;
+		nextID=250;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6115.3867,155.08975,10758.425};
-		dir[]={-0.36206597,-0.68059933,0.63712561};
-		up[]={-0.33634505,0.73248851,0.59186959};
-		aside[]={0.86950713,5.7218131e-008,0.49412817};
+		pos[]={7440.3662,50.070972,10678.064};
+		dir[]={0.04548401,-0.24360637,-0.96882474};
+		up[]={0.011424752,0.96986979,-0.24335644};
+		aside[]={-0.99891675,-9.3044946e-008,-0.046896014};
 	};
 };
 binarizationWanted=0;
@@ -48,13 +48,14 @@ addons[]=
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Signs_F_Signs_Ad",
 	"A3_Soft_F_EPC_Truck_03",
-	"A3_Structures_F_Tank_Military_Fortifications"
+	"A3_Structures_F_Tank_Military_Fortifications",
+	"A3_Structures_F_Kart_Signs_Companies"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=15;
+		items=16;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -160,17 +161,70 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item15
+		{
+			className="A3_Structures_F_Kart";
+			name="Arma 3 Karts - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=7032757;
 class ScenarioData
 {
 	author="Aroun MCF";
+	respawn=3;
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
 	class Intel
 	{
+		overviewText="Attaque/Défense de base Alpha v0.0.1 by BriCodeur Team";
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startFog=0.39500442;
@@ -193,7 +247,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=189;
+		items=190;
 		class Item0
 		{
 			dataType="Group";
@@ -7437,7 +7491,7 @@ class Mission
 			position[]={7051.5254,67.113159,10311.038};
 			name="marker_6";
 			type="mil_arrow";
-			angle=270.03687;
+			angle=270.03677;
 			id=243;
 			atlOffset=-11.279594;
 		};
@@ -7490,6 +7544,47 @@ class Mission
 			angle=180;
 			id=248;
 			atlOffset=-6.2637253;
+		};
+		class Item189
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7449.4819,29.905972,10560.575};
+				angles[]={0,4.7298422,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this addAction [""Conseil"",{" \n "hint ""fais \n""""SHIFT + Y""""\nen regardant un véhicule"";" \n "}];}";
+			};
+			id=249;
+			type="SignAd_Sponsor_Fuel_white_F";
+			atlOffset=-1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

@@ -6,7 +6,7 @@ onLoadMission = "<t size='.85' align = 'center' color='#D2D601'>Mission</t><br/>
 // Tu ne touche pas sauf si tu sais ce que tu fais !
 joinUnassigned = 1;
 respawn = BASE;
-respawndelay = 0; // Temps de respawn
+respawndelay = 10; // Temps de respawn
 disabledAI = 1; // n'influt pas sur l'ennemi juste les slots jouable
 disableChannels[]={{0,false,false},{1,false,false},{2,false,false},{6,false,false}};
 enableDebugConsole = 1;
@@ -18,10 +18,10 @@ respawnDialog = 1;
 ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 1;         //0: basic, 1: advanced, 2: realistic
 ReviveRequiredTrait = 0;                //0: none, 1: medic trait is required
-ReviveRequiredItems = 0;                //0: none, 1: medkit, 2: medkit or first aid kit
+ReviveRequiredItems = 2;                //0: none, 1: medkit, 2: medkit or first aid kit
 ReviveRequiredItemsFakConsumed = 0;     //0: first aid kit is not consumed upon revive, 1: first aid kit is consumed
 ReviveMedicSpeedMultiplier = 2;         //speed multiplier for revive performed by medic
-ReviveForceRespawnDelay = 0;            //time needed to perform force respawn (in secs)
+ReviveForceRespawnDelay = 10;            //time needed to perform force respawn (in secs)
 
 /*
 Temps en seconde pour l'incapacité (il arrive que l'action disparaisse mais elle reste active (Appuyer ESPACE) Ce n'est pas de mon ressort... Allô Bohémia, oui ton respawn bug par moment)
@@ -39,7 +39,7 @@ ReviveBleedOutDelay = 300;
 
 class Header
 {
-	gameType = COOP;
+	gameType = SC; // Sector control
 	minPlayers = 1;
 	maxPlayers = 10;
 };

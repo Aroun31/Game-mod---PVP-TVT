@@ -38,7 +38,7 @@
 
     }];
 */
-
+    (group player) setVariable ["BTSD_Camps", _BTSD_arrMrk, TRUE];
     [(group player), _BTSD_arrMrk, "_DA3F_Target setVariable [""BTSD_Camps"", _DA3F_Args, TRUE];"] remoteExecCall ["BT_fnc_execCodeTarget", 0, TRUE];
 
     [BTSD_Obj_Map, _BTSD_arrMrk, "_DA3F_Target setVariable [""BTSD_GetCamps"", TRUE, TRUE];"] remoteExecCall ["BT_fnc_execCodeTarget", 0];

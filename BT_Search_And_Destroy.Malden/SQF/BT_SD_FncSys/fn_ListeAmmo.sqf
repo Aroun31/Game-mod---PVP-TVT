@@ -24,13 +24,19 @@
 
     private _BTSD_MagAssom     = getArray(missionConfigFile >> "BTSD_Cfg_Mission" >> "BTSD_Cfg_Stuff" >> "AmmoAssom");
 
+    private _BTSD_getAssaillant = {
+        private _BTSD_ArrCamps      = (group player) getVariable ["BTSD_Camps", []];
+        private _BTSD_Camps         = "";
+        _BTSD_Camps = _BTSD_ArrCamps # 0;
+        (_BTSD_Camps isEqualTo "Assaillant")
+    };
         _wpAmmo     = Cfg_A3(getArray,"cfgWeapons",_weapon,"magazines");
 
         lbClear ListeAmmo;
         {
             _wpAmmoName     =  Cfg_A3(getText,"cfgMagazines",_x,"displayName");
-
-            if (_x in _BTSD_MagAssom) then [{
+            private _check  = call _BTSD_getAssaillant;
+            if (_x in _BTSD_MagAssom && !_check) then [{
               _BTSD_AmmoAssom = Cfg_A3(getText, "cfgMagazines",_x,"ammo");
               _val = ((count _wpAmmoName) - 8);
               _BTSD_index = ListeAmmo lbAdd format ["Balles assommante %1", (_wpAmmoName select [_val])];
