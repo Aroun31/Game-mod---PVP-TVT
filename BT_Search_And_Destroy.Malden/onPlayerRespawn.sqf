@@ -13,8 +13,17 @@
     *           onPlayerRespawn.sqf
     *
     */
-    player addAction ["Je veux mon vehicle",BT_fnc_Buy_Vehicles];
-    player addAction ["HELLO LOBBY",{failMission "BackLobby"}];
+
+    //player addAction ["HELLO LOBBY",{failMission "BackLobby"}];
+
+
+
     waitUntil {!(isNil "BTSD_NextOk")};
     waitUntil {BTSD_NextOk};
     [] call BT_fnc_Spawn_menu;
+
+    if !((backpack player) isEqualTo "") then {removeBackpack player;};
+
+    player addBackpack "B_Kitbag_mcamo";
+    clearBackpackCargoGlobal player;
+    (unitBackpack player) setObjectTextureGlobal [0,""];

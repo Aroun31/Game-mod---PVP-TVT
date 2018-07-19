@@ -9,5 +9,9 @@
 			class Buy_Vehicles			{};
 			class Keysboard				{};
 			class SoundVolume			{};
+			class handleDamage			{};
+			class buyWeapon				{};
+			class WeaponShop			{};
+			class ListeAmmo				{};
 
 	};

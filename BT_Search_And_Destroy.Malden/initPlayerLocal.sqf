@@ -22,8 +22,8 @@
 
         if (_BTSD_CheckCamps isEqualTo []) then [{
 
-                _BTSD_Msg = "Attente de l'attribution des camps";
-                _BTSD_handle = "" spawn BT_fnc_SelectCamps;
+                _BTSD_Msg       = "Attente de l'attribution des camps";
+                _BTSD_handle    = "" spawn BT_fnc_SelectCamps;
                 waitUntil {scriptDone _BTSD_handle};
         },{
             _BTSD_Msg = format ["%1 attribué pour les %2", _BTSD_CheckCamps # 0, _BTSD_CheckCamps # 1];
@@ -38,10 +38,13 @@
                 !(str _BTSD_CheckCamps isEqualTo "[]")
             };
 
-            systemChat str [_BTSD_CheckCamps];
+//            systemChat str [_BTSD_CheckCamps];
 
             []spawn
             {
                 waitUntil {!(isNull (findDisplay 46))};
                 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call BT_fnc_Keysboard"];
             };
+
+        player addEventHandler ["HandleDamage", {_this call BT_fnc_handleDamage;}];
+     //   player addEventHandler ["fired", "hint format ['%1', _this]"];

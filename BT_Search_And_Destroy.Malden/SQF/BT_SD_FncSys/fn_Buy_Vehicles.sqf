@@ -32,7 +32,6 @@
         hint "Ho hé ho !\n Tu veux m'arnaquer ? \nRapproche toi ramassé de sous détritus";
     };
 
-
     private _group              = (group player);
     private _BTSD_getVehTeam    = _group getVariable ["MaxVehTeam", 0];
     private _BTSD_MaxVehTeam    = Cfg_MissionInfo(getNumber,"RandProps","BT_MaxVehTeam");
@@ -42,11 +41,27 @@
     private _BTSD_vehicle       = objNull;
     private _BTSD_UidUnit       = "";
     private _BTSF_DisplayName   = Cfg_Veh_A3(getText,_BTSF_className,"DisplayName");
+    //0= east | 1 = west | 2 = indep | 3 = civ
+    private _BTSF_SideVeh       = Cfg_Veh_A3(getNumber,_BTSF_className,"side");
     private _BTSD_ValideBut     = false;
+    private _BTSD_Exit          = false;
+
+        if !(_BTSF_className in ["B_Heli_Light_01_F"]) then {
+            if ((side player)isEqualTo east && !(_BTSF_SideVeh isEqualTo 0)) then {
+                _BTSD_Exit  = true;
+            };
+
+            if ((side player)isEqualTo west && !(_BTSF_SideVeh isEqualTo 1)) then {
+                _BTSD_Exit  = true;
+            };
+        };
+
+    if (_BTSD_Exit) exitWith {};
 
     if (_BTSD_getVehTeam >= _BTSD_MaxVehTeam) exitWith {
         hintSilent format["Tu crois que c'est gratis tout ça !?\nTon équipe ne dispose plus de véhicules\n%1 par team", _BTSD_MaxVehTeam];
     };
+
     _BTSD_ValideBut     = [format ["<t color='#FEFEFE' size='1' align='center' >Véhicule :<br/>%1<br/>Es-tu sure de vouloir le prendre ?<t/>", _BTSF_DisplayName],"Véhicule validation", "OUI", "NON"]call bis_fnc_GUImessage;
 
         if !(_BTSD_ValideBut) exitWith {
@@ -83,5 +98,22 @@
         if (_BTSD_UidUnit isEqualTo "_SP_PLAYER_") then {
             _BTSD_UidUnit = profileName;
         };
+
         _BTSD_vehicle setVariable ["BTSD_ItsMyVeh", _BTSD_UidUnit, true];
         hint "Ton véhicule est prêt";
+        clearWeaponCargoGlobal _BTSD_vehicle;
+        clearBackpackCargo _BTSD_vehicle;
+        //clearItemCargoGlobal _BTSD_vehicle;
+        clearMagazineCargoGlobal _BTSD_vehicle;
+/*
+   private _colors = switch (side player) do {
+        case west: {
+            "#(rgb,8,8,3)color(0,0.3,1,1)"
+        };
+        case east: {
+            "#(rgb,8,8,3)color(1,0.2,0,1)"
+        };
+    };
+
+    _BTSD_vehicle setObjectTextureGlobal [1,_colors];
+*/

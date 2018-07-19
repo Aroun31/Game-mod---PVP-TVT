@@ -10,12 +10,11 @@
     *               [DA3F-BT] Aroun Le BriCodeur
     *
     *       File :
-    *           initServer.sqf
+    *           fn_DeleteWeaponHolder.sqf
     *
     */
-
-    skipTime (ceil random 24);
-
-    //BTSD_GetBattle = [sideUnknown, -1]; // -1 = random | 0 = defense | 1 = assaillant
-
-        /*[]call BT_fnc_SelectCampsByServer;*/
+        private _objSol = [];
+        _objSol = nearestObjects [player, ["WeaponHolder"], 20];
+        {
+            deleteVehicle _x;
+        } forEach _objSol;

@@ -47,18 +47,21 @@
 
    switch (_key) do
         {
+
         	case 21: {
             if (_shift) then [{
                 _handled = []spawn BT_fnc_Buy_Vehicles;
               },{
                 hintSilent "menu joueur prochainement...\nOu pas... ça dépend si tu es sage";
             }];
+
         	};
 
           // Sound Volume
           case 8: {
             _handled = [false]call BT_fnc_SoundVolume;
           };
+
           case 9: {
             _handled = [true]call BT_fnc_SoundVolume;
           };
