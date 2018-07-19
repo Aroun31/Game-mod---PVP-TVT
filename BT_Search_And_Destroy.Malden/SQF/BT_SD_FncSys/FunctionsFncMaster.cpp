@@ -13,5 +13,6 @@
 			class buyWeapon				{};
 			class WeaponShop			{};
 			class ListeAmmo				{};
+			class ShowMrk				{};
 
 	};

@@ -56,7 +56,9 @@
             };
         };
 
-    if (_BTSD_Exit) exitWith {};
+    if (_BTSD_Exit) exitWith {
+        hint "Hop pop pop !! \nTu veux ma mort ou quoi ?\nJe peux pas te laisser ce véhicule";
+    };
 
     if (_BTSD_getVehTeam >= _BTSD_MaxVehTeam) exitWith {
         hintSilent format["Tu crois que c'est gratis tout ça !?\nTon équipe ne dispose plus de véhicules\n%1 par team", _BTSD_MaxVehTeam];

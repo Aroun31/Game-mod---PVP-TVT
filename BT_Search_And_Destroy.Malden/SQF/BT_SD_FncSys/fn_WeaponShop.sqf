@@ -24,7 +24,7 @@
     private _BTSD_ArrWeapons    = getArray(missionConfigFile >> "BTSD_Cfg_Mission" >> "BTSD_Cfg_Stuff" >> _BTSD_Class >> "Weapons");
 
     private _BTSD_ArrOptics     = getArray(missionConfigFile >> "BTSD_Cfg_Mission" >> "BTSD_Cfg_Stuff" >> _BTSD_Class >> "Optics");
-
+    systemChat format ["Shop : %1", _BTSD_Class];
     private _BTSD_index = -1;
 
     {

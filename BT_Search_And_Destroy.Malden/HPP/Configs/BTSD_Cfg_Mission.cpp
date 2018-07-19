@@ -28,6 +28,7 @@
 		class BTSD_Cfg_Stuff
 		{
 			AmmoAssom[]		= {"30Rnd_9x21_Yellow_Mag"}; // "B_9x21_Ball_Tracer_Yellow"
+			
 			class Defense
 			{
 				Weapons[]	= {"hgun_P07_F", "arifle_MX_F", "arifle_MX_SW_Black_F", "MMG_02_sand_F", "srifle_LRR_camo_F", "launch_RPG32_F"};

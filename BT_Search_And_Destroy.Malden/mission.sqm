@@ -8,18 +8,18 @@ class EditorData
 	toggles=97;
 	class ItemIDProvider
 	{
-		nextID=243;
+		nextID=249;
 	};
 	class MarkerIDProvider
 	{
-		nextID=6;
+		nextID=12;
 	};
 	class Camera
 	{
-		pos[]={6027.4902,158.29538,10841.486};
-		dir[]={0.73865128,-0.6404717,-0.21072993};
-		up[]={0.61606753,0.76782101,-0.17575951};
-		aside[]={-0.27436584,6.1828177e-007,-0.96172196};
+		pos[]={6115.3867,155.08975,10758.425};
+		dir[]={-0.36206597,-0.68059933,0.63712561};
+		up[]={-0.33634505,0.73248851,0.59186959};
+		aside[]={0.86950713,5.7218131e-008,0.49412817};
 	};
 };
 binarizationWanted=0;
@@ -193,7 +193,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=183;
+		items=189;
 		class Item0
 		{
 			dataType="Group";
@@ -4299,7 +4299,7 @@ class Mission
 		class Item75
 		{
 			dataType="Marker";
-			position[]={6102.2964,120.32,10768.854};
+			position[]={6097.748,120.32,10764.099};
 			name="BTSD_Mrk_Base_Defense";
 			text="Defense";
 			type="mil_flag";
@@ -6658,8 +6658,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6105.8667,121.36105,10774.161};
-				angles[]={0,0.80285144,0};
+				position[]={6105.4028,121.27358,10819.334};
+				angles[]={0,1.6580627,0};
 			};
 			side="Empty";
 			flags=5;
@@ -6673,12 +6673,13 @@ class Mission
 		class Item147
 		{
 			dataType="Marker";
-			position[]={6104.3613,120.32,10772.821};
-			name="BTSD_Mrk_WeaponShopAssaillant_1";
+			position[]={6104.7749,120.229,10819.599};
+			name="BTSD_Mrk_WeaponShopDefense";
 			text="Armes";
 			type="mil_dot";
 			colorName="ColorGreen";
 			id=207;
+			atlOffset=-0.0001449585;
 		};
 		class Item148
 		{
@@ -7429,6 +7430,66 @@ class Mission
 			id=242;
 			type="O_Quadbike_01_F";
 			atlOffset=0.0029983521;
+		};
+		class Item183
+		{
+			dataType="Marker";
+			position[]={7051.5254,67.113159,10311.038};
+			name="marker_6";
+			type="mil_arrow";
+			angle=270.03687;
+			id=243;
+			atlOffset=-11.279594;
+		};
+		class Item184
+		{
+			dataType="Marker";
+			position[]={7053.417,48.583984,10646.884};
+			name="marker_7";
+			type="mil_arrow";
+			angle=270;
+			id=244;
+			atlOffset=-2.7521858;
+		};
+		class Item185
+		{
+			dataType="Marker";
+			position[]={7049.6357,37.735863,10935.313};
+			name="marker_8";
+			type="mil_arrow";
+			angle=270;
+			id=245;
+			atlOffset=-5.6252213;
+		};
+		class Item186
+		{
+			dataType="Marker";
+			position[]={6739.1421,85.539757,10492.258};
+			name="marker_9";
+			type="mil_arrow";
+			angle=270;
+			id=246;
+			atlOffset=3.0075989;
+		};
+		class Item187
+		{
+			dataType="Marker";
+			position[]={6735.3608,81.344917,10780.688};
+			name="marker_10";
+			type="mil_arrow";
+			angle=270;
+			id=247;
+			atlOffset=5.3405762e-005;
+		};
+		class Item188
+		{
+			dataType="Marker";
+			position[]={6506.9771,107.48966,10653.376};
+			name="marker_11";
+			type="mil_ambush";
+			angle=180;
+			id=248;
+			atlOffset=-6.2637253;
 		};
 	};
 };

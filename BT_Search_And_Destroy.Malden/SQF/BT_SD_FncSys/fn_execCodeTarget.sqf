@@ -22,7 +22,7 @@
             "_DA3F_Code"
         ];
 
-        (format ["return : ' %1 ' %2 - %3", _DA3F_Code, _DA3F_Args, _DA3F_Target]) remoteExecCall ["systemChat"];
+        //(format ["return : ' %1 ' %2 - %3", _DA3F_Code, _DA3F_Args, _DA3F_Target]) remoteExecCall ["systemChat"];
 
     call compile format ["%1", _DA3F_Code];
 

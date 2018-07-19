@@ -23,6 +23,7 @@
         BTSD_NextOk     = FALSE;
 
         player setVariable ["BTSD_Jail", FALSE, TRUE];
+        player setVariable ["BTSD_Coma", 0, FALSE];
 
     // by side
     switch (side player) do {

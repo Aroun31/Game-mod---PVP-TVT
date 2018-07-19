@@ -28,7 +28,6 @@
         },{
             _BTSD_Msg = format ["%1 attribué pour les %2", _BTSD_CheckCamps # 0, _BTSD_CheckCamps # 1];
     }];
-
             []execVM "SQF\init_SidePlayer.sqf";
 
             hint _BTSD_Msg;
