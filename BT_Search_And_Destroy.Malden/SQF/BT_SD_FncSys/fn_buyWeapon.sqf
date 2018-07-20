@@ -43,12 +43,13 @@
         };
             _class = _BTSD_ListWp lbData _BTSD_IndexWp;
             player addWeapon _class;
+            hint "Arme ajouté";
         };
 
         case "1501": {
             _class = _BTSD_ListAmmo lbData _BTSD_IndexAm;
             player addMagazine _class;
-            hint "Optic ajouté";
+            hint "Chargeur ajouté";
         };
 
         case "1502": {

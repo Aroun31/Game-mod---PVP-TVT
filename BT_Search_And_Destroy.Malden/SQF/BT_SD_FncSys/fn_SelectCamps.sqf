@@ -1,4 +1,4 @@
-#include "..\..\DA3F_macros.hpp"
+//#include "..\..\DA3F_macros.hpp"
     /*
     *
     *       Project :
@@ -12,42 +12,27 @@
     *
     *       File :
     *           fn_SelectCamps.sqf
+    *           []call BT_fnc_SelectCamps;
     *
     */
 
-    private _BTSD_info_Base = Cfg_MissionInfo(getArray,"Map_infos","Markers_Bases");
+    private _BTSD_Config    = missionConfigFile >> "BTSD_Cfg_Mission";
     private _BTSD_Side		= side player;
 
-	private _BTSD_arrMrk 	= selectRandom _BTSD_info_Base;
-	private _BTSD_Role 		= _BTSD_arrMrk # 0;
-	private _BTSD_Mrk 		= _BTSD_arrMrk # 1;
+    private _BTSD_MrkDefe   = getText (_BTSD_Config >> "Defense" >> "Mrk_Bases");
+    private _BTSD_MrkAssa   = getText (_BTSD_Config >> "Assaillant" >> "Mrk_Bases");
+    private _BTSD_ArrRet    = [];
 
-    	/*_BTSD_Group setVariable ["BTSD_Camps", _BTSD_Mrk, TRUE];*/
 
-/*
-    private _BTSD_Group     = if (_BTSD_Side isEqualTo west) then [{
+    //systemChat str [_BTSD_MrkAssa, _BTSD_MrkDefe];
 
-        [{
-            BTSD_Grp_Blue setVariable ["BTSD_Camps", _BTSD_Mrk, TRUE];
-            (format ["Yolo salut c'est moi : ' %1 ' ", _BTSD_Mrk]) remoteExecCall ["systemChat"];
-        }] remoteExecCall ["BT_fnc_execCodeTarget", 2, TRUE];
+        _BTSD_ArrRet = switch (_BTSD_Side) do {
+        //    case west: {[_BTSD_MrkDefe,"Defense"]};
+        //    case east: {[_BTSD_MrkAssa,"Assaillant"]};
 
-    },{
+            case east: {[_BTSD_MrkDefe,"Defense"]};
+            case west: {[_BTSD_MrkAssa,"Assaillant"]};
 
-        [BTSD_Obj_Map, format ["%1", _BTSD_Mrk], "_DA3F_Target setVariable [""BTSD_Camps"", _DA3F_Args, TRUE];"] remoteExecCall ["BT_fnc_execCodeTarget", 2, TRUE];
+        };
 
-    }];
-*/
-    (group player) setVariable ["BTSD_Camps", _BTSD_arrMrk, TRUE];
-    [(group player), _BTSD_arrMrk, "_DA3F_Target setVariable [""BTSD_Camps"", _DA3F_Args, TRUE];"] remoteExecCall ["BT_fnc_execCodeTarget", 0, TRUE];
-
-    [BTSD_Obj_Map, _BTSD_arrMrk, "_DA3F_Target setVariable [""BTSD_GetCamps"", TRUE, TRUE];"] remoteExecCall ["BT_fnc_execCodeTarget", 0];
-
-    	private _BTSD_Msg = format ["%1 attribué pour les %2", _BTSD_Role, _BTSD_Side];
-
-    	_BTSD_Msg spawn {
-    		sleep 1;
-    		_this remoteExecCall ["hint"];
-    		sleep 10;
-    		"" remoteExecCall ["hintSilent"];
-    	};
+    _BTSD_ArrRet

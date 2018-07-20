@@ -267,7 +267,7 @@ class Mission
 					class Attributes
 					{
 						name="DA3F_Blue_01";
-						isPlayer=1;
+						isPlayable=1;
 					};
 					id=1;
 					type="B_Soldier_F";
@@ -896,6 +896,7 @@ class Mission
 					class Attributes
 					{
 						name="DA3F_Red_01";
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=23;

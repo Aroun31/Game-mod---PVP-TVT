@@ -15,6 +15,7 @@
     */
 
     private _BTSD_handle        = FALSE;
+/*
     private _BTSD_CheckCamps    = "";
     private _BTSD_Msg           = "";
 
@@ -28,16 +29,18 @@
         },{
             _BTSD_Msg = format ["%1 attribué pour les %2", _BTSD_CheckCamps # 0, _BTSD_CheckCamps # 1];
     }];
-            []execVM "SQF\init_SidePlayer.sqf";
 
             hint _BTSD_Msg;
 
             waitUntil {
                 _BTSD_CheckCamps = (group player) getVariable ["BTSD_Camps", []];
                 !(str _BTSD_CheckCamps isEqualTo "[]")
-            };
+            };*/
 
 //            systemChat str [_BTSD_CheckCamps];
+
+            []execVM "SQF\init_SidePlayer.sqf";
+            []call BT_fnc_ShowMrk;
 
             []spawn
             {

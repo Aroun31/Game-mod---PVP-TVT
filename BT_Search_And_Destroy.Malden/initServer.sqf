@@ -16,6 +16,8 @@
 
     skipTime (ceil random 24);
 
-    //BTSD_GetBattle = [sideUnknown, -1]; // -1 = random | 0 = defense | 1 = assaillant
-
-        /*[]call BT_fnc_SelectCampsByServer;*/
+        addMissionEventHandler ["HandleDisconnect", {
+            params ["_unit", "_id", "_uid", "_name"];
+                deleteVehicle _unit;
+            FALSE;
+        }];

@@ -12,11 +12,13 @@ private _DA3F_list_No_Show_Mrk_for_Defense 		= ["BTSD_Mrk_WeaponShopAssaillant",
 private _DA3F_list_No_Show_Mrk_for_Assaillant 	= ["BTSD_Mrk_WeaponShopDefense","BTSD_Mrk_Jail"];
 
 	// ... etc ...
-	    private _BTSD_ArrClass		= (group player) getVariable ["BTSD_Camps", []];
+	    private _BTSD_ArrClass		= []call BT_fnc_SelectCamps;
+	    //private _BTSD_ArrClass		= (group player) getVariable ["BTSD_Camps", []];
 
-	    _BTSD_Class                 = _BTSD_ArrClass # 0;
+	    _BTSD_Class                 = _BTSD_ArrClass param[1];
 
 	// Add other side
+
 	    switch (_BTSD_Class) do {
 
 	        case "Defense": {

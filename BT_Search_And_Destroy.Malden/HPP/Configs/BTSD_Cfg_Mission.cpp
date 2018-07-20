@@ -11,36 +11,23 @@
 
 			// Other
 			BT_MaxVehTeam	= 10;
-			MyCondi[]		= {"if (alive player) then {true}","player distance _obj < 15 && {alive player && {isTouchingGround player}}"};
-
-		};
-
-		class Map_infos
-		{
 			JailMarker		= "BTSD_Mrk_Jail"; // Marker de prison
-			// Rôles et markers
-			Markers_Bases[]	= {
-				{"Defense", "BTSD_Mrk_Base_Defense"},
-				{"Assaillant", "BTSD_Mrk_Base_Assaillant"}
-			};
+			AmmoAssom[]		= {"30Rnd_9x21_Yellow_Mag"}; // Muns Assommante "B_9x21_Ball_Tracer_Yellow"
+
 		};
 
-		class BTSD_Cfg_Stuff
+		class Defense
 		{
-			AmmoAssom[]		= {"30Rnd_9x21_Yellow_Mag"}; // "B_9x21_Ball_Tracer_Yellow"
-			
-			class Defense
-			{
-				Weapons[]	= {"hgun_P07_F", "arifle_MX_F", "arifle_MX_SW_Black_F", "MMG_02_sand_F", "srifle_LRR_camo_F", "launch_RPG32_F"};
-				Optics[]	= {"optic_Holosight", "optic_AMS", "optic_Arco", "optic_ERCO_blk_F", "optic_Hamr", "optic_DMS", "optic_KHS_blk", "optic_LRPS"};
-				Vehicles[]	= {};
-			};
+			Mrk_Bases	= "BTSD_Mrk_Base_Defense";
+			Weapons[]	= {"hgun_P07_F", "arifle_Katiba_GL_F", "arifle_SPAR_02_blk_F", "LMG_Zafir_F", "srifle_GM6_F", "launch_RPG32_F"};
+			Optics[]	= {"optic_Holosight", "optic_AMS", "optic_Arco", "optic_ERCO_blk_F", "optic_Hamr", "optic_DMS", "optic_KHS_blk", "optic_LRPS"};
 
-			class Assaillant
-			{
-				Weapons[]	= {"hgun_Rook40_F", "arifle_Katiba_GL_F", "arifle_SPAR_02_blk_F", "LMG_Zafir_F", "srifle_GM6_F", "srifle_DMR_01_F"};
-				Optics[]	= {"optic_Holosight", "optic_AMS", "optic_Arco", "optic_ERCO_blk_F", "optic_Hamr", "optic_DMS", "optic_KHS_blk", "optic_LRPS"};
-				Vehicles[]	= {};
-			};
+		};
+
+		class Assaillant
+		{
+			Mrk_Bases	= "BTSD_Mrk_Base_Assaillant";
+			Weapons[]	= {"hgun_Rook40_F", "arifle_MX_F", "arifle_MX_SW_Black_F", "MMG_02_sand_F", "srifle_LRR_camo_F"};
+			Optics[]	= {"optic_Holosight", "optic_AMS", "optic_Arco", "optic_ERCO_blk_F", "optic_Hamr", "optic_DMS", "optic_KHS_blk", "optic_LRPS"};				
 		};
 	};

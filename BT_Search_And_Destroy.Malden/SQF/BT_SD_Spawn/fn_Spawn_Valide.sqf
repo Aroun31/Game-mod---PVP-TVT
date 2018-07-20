@@ -19,12 +19,16 @@
     private _BTSD_Idc       = ctrlIDC _BTSD_MyCtrl;
     private _grp            = grpNull;
     private _BTSD_unit      = objNull;
-    private _BTSD_CheckCamps  = (group player) getVariable ["BTSD_Camps", []];
-
+    //private _BTSD_mrk       = (group player) getVariable ["BTSD_Camps", []];
+    private _BTSD_Mrk_Base  = []call BT_fnc_SelectCamps;
+    systemChat str [_BTSD_Mrk_Base];
+    _BTSD_Mrk_Base = _BTSD_Mrk_Base param[0];
+/*
         _BTSD_CheckCamps params[
             "_BTSD_Role",
             "_BTSD_Mrk_Base"
         ];
+*/
 
     if (_BTSD_Mrk_Base isEqualTo "" && {!(str _BTSD_Idc isEqualTo "2402")}) exitWith {
         systemChat "Spawn introuvable"

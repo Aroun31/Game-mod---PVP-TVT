@@ -50,9 +50,9 @@ if (!isNull _source) then {
                 } forEach (magazines player);
                 sleep 120;
 
-                _BTSD_CheckCamps  = (group player) getVariable ["BTSD_Camps", []];
+                _BTSD_CheckCamps  = []call BT_fnc_SelectCamps;
 
-                    private _BTSD_Mrk_Base = _BTSD_CheckCamps params[1];
+                    private _BTSD_Mrk_Base = _BTSD_CheckCamps params[0];
 
                 player setpos getMarkerPos _BTSD_Mrk_Base;
                 hint "Libéré de prison";
@@ -81,7 +81,7 @@ if (!isNull _source) then {
                  "dynamicBlur" ppEffectAdjust [0]; // intensity of blur
                  "dynamicBlur" ppEffectCommit 5; // time till vision is fully blurred
                  // reattribution du key_handler.sqf
-                 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call BT_fnc_Keysboard"];
+                 (findDisplay 46) displaySetEventHandler ["KeyDown", "_this call BT_fnc_Keysboard"];
                     resetCamShake;
                 _this setUnconscious false;
                 DA3F_IsAssom = false;

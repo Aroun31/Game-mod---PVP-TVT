@@ -18,7 +18,7 @@
     disableSerialization;
     if !(createDialog "BTSD_Spawn") exitWith {};
 
-        [] call BT_fnc_ShowMrk;
+
 
         private _BTSD_BackGroundPix = Cfg_MissionInfo(getText,"RandProps","BT_Img_BackGSp"); // Image de fond
         private _BTSD_PicturDesc    = ""; // Image description (la flemme ^^)

@@ -18,12 +18,13 @@
     disableSerialization;
     if !(createDialog "BTSD_Weapon_Shop") exitWith {};
         hint "Simple clic sur une arme pour voir les munitions\n\nDouble clic sur l'article pour l'ajouter";
-    private _BTSD_Class         = (group player) getVariable ["BTSD_Camps", []];
-    _BTSD_Class                 = _BTSD_Class # 0;
+    private _BTSD_Class         = []call BT_fnc_SelectCamps;
+    //private _BTSD_Class         = (group player) getVariable ["BTSD_Camps", []];
+    _BTSD_Class                 = _BTSD_Class param[1];
 
-    private _BTSD_ArrWeapons    = getArray(missionConfigFile >> "BTSD_Cfg_Mission" >> "BTSD_Cfg_Stuff" >> _BTSD_Class >> "Weapons");
+    private _BTSD_ArrWeapons    = getArray(missionConfigFile >> "BTSD_Cfg_Mission" >> _BTSD_Class >> "Weapons");
 
-    private _BTSD_ArrOptics     = getArray(missionConfigFile >> "BTSD_Cfg_Mission" >> "BTSD_Cfg_Stuff" >> _BTSD_Class >> "Optics");
+    private _BTSD_ArrOptics     = getArray(missionConfigFile >> "BTSD_Cfg_Mission" >> _BTSD_Class >> "Optics");
     systemChat format ["Shop : %1", _BTSD_Class];
     private _BTSD_index = -1;
 

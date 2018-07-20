@@ -22,12 +22,13 @@
 
       if (_weapon isEqualTo "") exitWith {};
 
-    private _BTSD_MagAssom     = getArray(missionConfigFile >> "BTSD_Cfg_Mission" >> "BTSD_Cfg_Stuff" >> "AmmoAssom");
+    private _BTSD_MagAssom     = Cfg_MissionInfo(getArray,"RandProps","AmmoAssom");
+
 
     private _BTSD_getAssaillant = {
-        private _BTSD_ArrCamps      = (group player) getVariable ["BTSD_Camps", []];
+        private _BTSD_ArrCamps      = []call BT_fnc_SelectCamps;
         private _BTSD_Camps         = "";
-        _BTSD_Camps = _BTSD_ArrCamps # 0;
+        _BTSD_Camps = _BTSD_ArrCamps param[1];
         (_BTSD_Camps isEqualTo "Assaillant")
     };
         _wpAmmo     = Cfg_A3(getArray,"cfgWeapons",_weapon,"magazines");
