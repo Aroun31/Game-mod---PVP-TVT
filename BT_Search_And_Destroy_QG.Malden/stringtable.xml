@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Farming Party by [DA3F]Aroun Le BriCodeur">
+    <Package name="FarmingParty">
+        <Key ID="DA3F_WelcomeChat">
+            <Original>Welcome to Aroun's Farming Mission 'Aroun Le BriCodeur' for the Arma 3 Community</Original>
+            <French>Bienvenue sur la mission : Farming Party réalisé par : Aroun Le BriCodeur pour la communauté Arma 3</French>
+        </Key>
+        <Key ID="DA3F_WelcomeTitle">
+            <Original>Welcome to Aroun's Farming Mission 'Aroun Le BriCodeur' for the Arma 3 Community</Original>
+            <French>Bienvenue sur la mission :\nFarming Party\n réalisé par : \nAroun Le BriCodeur\n pour la communauté Arma 3</French>
+        </Key>
+        <Key ID="DA3F_PlayerSpawnInfo">
+            <Original>Farm: windows left \n\n Player menu: ² (above TAB) \n\n Lower volume: 8 _ \ \n\n Turn up the volume: 9 ç ^\n\nGood Game</Original>
+            <French>Farm : windows gauche \n\n Menu player : ² (au dessus de TAB) \n\nBaisser le volume : 8 _ \ \n\n Monter le volume : 9 ç ^</French>
+        </Key>
+        <Key ID="DA3F_NotUseShop">
+            <Original>You are not allowed to use this shop</Original>
+            <French>Tu n'es pas autorisé à utiliser ce shop</French>
+        </Key>
+        <Key ID="DA3F_NotCash">
+            <Original>You're missing cash guy</Original>
+            <French>Tu manque de cash mec</French>
+        </Key>
+        <Key ID="DA3F_NotYourVeh">
+            <Original>The nearest vehicle is not yours</Original>
+            <French>Le véhicule le plus proche n'est pas à toi</French>
+        </Key>
+        <Key ID="DA3F_SpawnJobEntrep">
+            <Original>You have just arrived at the company</Original>
+            <French>Vous venez d'arriver à l'entreprise</French>
+        </Key>
+        <Key ID="DA3F_SpawnJobCoope">
+            <Original>You have just arrived at the cooperative</Original>
+            <French>Vous venez d'arriver à la coopérative</French>
+        </Key>
+        <Key ID="DA3F_BuyVehSucces">
+            <Original>Purchase of the vehicle successfully</Original>
+            <French>Achat du véhicule avec succès</French>
+        </Key>
+        <Key ID="DA3F_SpawnMyVeh">
+            <Original>Your vehicle is waiting for you</Original>
+            <French>Votre véhicule vous attends</French>
+        </Key>
+        <Key ID="DA3F_VehInGarageSucces">
+            <Original>Your vehicle is in the garage</Original>
+            <French>Votre véhicule est au garage</French>
+        </Key>
+        <Key ID="DA3F_VehInGarageFail">
+            <Original>An error has occurred! \n Not possible to enter this vehicle</Original>
+            <French>Une erreur est arrivé !\nImpossible de rentrer ce véhicule</French>
+        </Key>
+        <Key ID="DA3F_VehNoSelect">
+            <Original>Please select a vehicle</Original>
+            <French>Veuillez sélectionner un véhicule</French>
+        </Key>
+        <Key ID="DA3F_ItemNoSelect">
+            <Original>Please select a item</Original>
+            <French>Veuillez sélectionner un item</French>
+        </Key>
+        <Key ID="DA3F_WelcomeMyShop">
+            <Original>Hello : %1\nWelcome to my shop</Original>
+            <French>Bonjour : %1\nBienvenue dans ma boutique</French>
+        </Key>
+        <Key ID="DA3F_NotLevel">
+            <Original>You do not have the required level for this purchase</Original>
+            <French>Tu n'as pas le niveau requis pour cet achat</French>
+        </Key>
+        <Key ID="DA3F_SaveSucces">
+            <Original>Backing up your data successfully</Original>
+            <French>Sauvgarde de vos données avec succès</French>
+        </Key>
+        <Key ID="DA3F_NoVeh">
+            <Original>You do not have any vehicles</Original>
+            <French>Tu ne dispose d'aucun véhicule</French>
+        </Key>
+        <Key ID="DA3F_CloseVeh">
+            <Original>Closing your vehicle</Original>
+            <French>Fermeture du véhicule</French>
+        </Key>
+        <Key ID="DA3F_OpenVeh">
+            <Original>Opening your vehicle</Original>
+            <French>Ouverture du véhicule</French>
+        </Key>
+        <Key ID="DA3F_NotPossible">
+            <Original>This action is not possible</Original>
+            <French>Cette action n'est pas possible</French>
+        </Key>
+    </Package>
+</Project>
