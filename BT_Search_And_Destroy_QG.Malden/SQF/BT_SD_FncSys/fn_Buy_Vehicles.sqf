@@ -29,7 +29,7 @@
     private _pos        = _GetQG modelToWorld [0, 20, 0.1];
     private _vehicle    = objNull;
 
-    hint str [_BTSD_Ctrl,_BTSD_idx,_GetQG];
+
         if !([_pos, 10, _GetQG] call BT_fnc_CheckSpPos) exitWith {
             hint "Déploiment impossible !\nAucun véhicules/bâtiments ne doit être présent dans un rayon de 30 mètres";
         };
