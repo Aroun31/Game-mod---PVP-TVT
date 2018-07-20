@@ -84,8 +84,12 @@
 
         _BTSD_VehDepolyed setFuel 0;
         _BTSD_VehDepolyed setVariable ["BTSD_ObjDeployed", _recObj, TRUE];
-        _BTSD_VehDepolyed allowDamage true;
 
     (format ["%1\n\nVient de déployer le QG", name _BTSD_unit]) remoteExecCall ["hint", _BTSD_side];
 
         ["all", _BTSD_VehDepolyed]call BT_fnc_ClearVeh;
+
+        _BTSD_VehDepolyed spawn {
+            sleep 2;
+            _this allowDamage true;
+        };
