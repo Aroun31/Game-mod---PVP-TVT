@@ -21,6 +21,7 @@
         ["_BTSD_Ctrl", controlNull, [controlNull]],
         ["_BTSD_idx", -1, [0]]
     ];
+
     private _group              = (group player);
     private _BTSD_getVehTeam    = _group getVariable ["MaxVehTeam", 0];
     private _className  = _BTSD_Ctrl lbData _BTSD_idx;
@@ -40,4 +41,5 @@
         ["all", _vehicle]call BT_fnc_ClearVeh;
         _BTSD_getVehTeam = _BTSD_getVehTeam + 1;
         _group setVariable ["MaxVehTeam", _BTSD_getVehTeam, TRUE];
+        hint "Le véhicule est devant le QG";
 

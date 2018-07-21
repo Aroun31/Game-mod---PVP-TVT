@@ -8,7 +8,7 @@ onLoadMission = "<t size='.85' align = 'center' color='#D2D601'>Mission</t><br/>
 // Tu ne touche pas sauf si tu sais ce que tu fais !
 joinUnassigned = 1;
 respawn = BASE;
-respawndelay = 10; // Temps de respawn
+respawndelay = 0; // Temps de respawn
 disabledAI = 1; // n'influt pas sur l'ennemi juste les slots jouable
 disableChannels[]={{0,false,false},{1,false,false},{2,false,false},{6,false,false}};
 enableDebugConsole = 1;

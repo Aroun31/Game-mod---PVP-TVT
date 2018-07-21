@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
-	toggles=225;
+	toggles=97;
 	class ItemIDProvider
 	{
-		nextID=280;
+		nextID=318;
 	};
 	class MarkerIDProvider
 	{
-		nextID=12;
+		nextID=16;
 	};
 	class Camera
 	{
-		pos[]={1053.8516,52.208607,710.64331};
-		dir[]={-0.014875083,-0.80819178,-0.5887453};
-		up[]={-0.020412661,0.58891636,-0.80793446};
-		aside[]={-0.99968958,-5.4368684e-008,0.025257712};
+		pos[]={4990.8408,113.41688,10323.113};
+		dir[]={0.24246392,-0.5412575,0.80516094};
+		up[]={0.15607479,0.84084362,0.51828784};
+		aside[]={0.95754212,7.6639844e-007,-0.28835115};
 	};
 };
 binarizationWanted=0;
@@ -38,13 +38,15 @@ addons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Structures_F_Civ_Garbage",
 	"A3_Signs_F_Signs_Ad",
-	"A3_Soft_F_Gamma_Truck_01"
+	"A3_Soft_F_Gamma_Truck_01",
+	"A3_Structures_F_Mil_Flags",
+	"A3_Air_F_Heli_Light_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -105,6 +107,13 @@ class AddonsMetaData
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="A3_Air_F";
+			name="Arma 3 Alpha - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -186,7 +195,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=62;
+		items=96;
 		class Item0
 		{
 			dataType="Group";
@@ -2058,6 +2067,7 @@ class Mission
 			};
 			id=42;
 			type="ProtectionZone_Invisible_F";
+			atlOffset=-1.7881393e-007;
 		};
 		class Item3
 		{
@@ -3998,6 +4008,812 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item62
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5888.3452,59.056671,3570.4919};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_01""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_10";
+			};
+			id=282;
+			type="Flag_Green_F";
+			atlOffset=0.073883057;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item63
+		{
+			dataType="Marker";
+			position[]={5881.2358,54.915001,3544.1699};
+			name="BTSD_Mrk_Capture_01";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=285;
+			atlOffset=0.00033950806;
+		};
+		class Item64
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3157.3779,228.32314,6346.0532};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_02""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_08";
+			};
+			id=286;
+			type="Flag_Green_F";
+			atlOffset=1.5258789e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={3118.4377,224.34,6343.6172};
+			name="BTSD_Mrk_Capture_02";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=287;
+		};
+		class Item66
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8181.0732,26.007011,3136.592};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_03""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_11";
+			};
+			id=288;
+			type="Flag_Green_F";
+			atlOffset=1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item67
+		{
+			dataType="Marker";
+			position[]={8238.9326,21.715324,3184.6868};
+			name="BTSD_Mrk_Capture_03";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=289;
+		};
+		class Item68
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7119.772,75.769867,6129.186};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_04""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_09";
+			};
+			id=290;
+			type="Flag_Green_F";
+			atlOffset=0.00025177002;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item69
+		{
+			dataType="Marker";
+			position[]={7128.1992,72.045006,6084.7334};
+			name="BTSD_Mrk_Capture_04";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=291;
+		};
+		class Item70
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7320.5791,171.54681,7988.125};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_05""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_06";
+			};
+			id=292;
+			type="Flag_Green_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item71
+		{
+			dataType="Marker";
+			position[]={7282.7886,167.57001,7994.2837};
+			name="BTSD_Mrk_Capture_05";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=293;
+		};
+		class Item72
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5485.1509,342.65341,6940.0742};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_06""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_07";
+			};
+			id=294;
+			type="Flag_Green_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item73
+		{
+			dataType="Marker";
+			position[]={5522.6587,335.96338,6998.6074};
+			name="BTSD_Mrk_Capture_06";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=295;
+		};
+		class Item74
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3522.696,138.71635,8544.4775};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_07""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_04";
+			};
+			id=296;
+			type="Flag_Green_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item75
+		{
+			dataType="Marker";
+			position[]={3570.7556,128.79411,8500.7051};
+			name="BTSD_Mrk_Capture_07";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=297;
+			atlOffset=0.041519165;
+		};
+		class Item76
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6002.0171,129.0968,8625.5254};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_08""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_03";
+			};
+			id=298;
+			type="Flag_Green_F";
+			atlOffset=-7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item77
+		{
+			dataType="Marker";
+			position[]={6016.0688,125.12,8633.3408};
+			name="BTSD_Mrk_Capture_08";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=299;
+		};
+		class Item78
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7148.0942,109.25681,9026.4199};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_09""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_02";
+			};
+			id=300;
+			type="Flag_Green_F";
+			atlOffset=7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item79
+		{
+			dataType="Marker";
+			position[]={7142.4429,105.28,9000.3467};
+			name="BTSD_Mrk_Capture_09";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=301;
+		};
+		class Item80
+		{
+			dataType="Marker";
+			position[]={7146.7817,105.28,9021.7793};
+			name="marker_14";
+			type="loc_Church";
+			id=302;
+		};
+		class Item81
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5548.6172,75.735023,11202.239};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_10""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_01";
+			};
+			id=303;
+			type="Flag_Green_F";
+			atlOffset=7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item82
+		{
+			dataType="Marker";
+			position[]={5555.896,71.760002,11194.25};
+			name="BTSD_Mrk_Capture_10";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=304;
+		};
+		class Item83
+		{
+			dataType="Marker";
+			position[]={5547.8628,71.755402,11205.749};
+			name="marker_15";
+			type="loc_Church";
+			id=305;
+		};
+		class Item84
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1026.293,35.139404,11887.955};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_01""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_05";
+			};
+			id=306;
+			type="Flag_Green_F";
+			atlOffset=-1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item85
+		{
+			dataType="Marker";
+			position[]={1026.9138,30.833052,11890.473};
+			name="BTSD_Mrk_Capture_11";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=307;
+		};
+		class Item86
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5756.2529,370.94321,6602.1836};
+				angles[]={0.19739674,0,6.2017655};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.82029676;
+				lock="UNLOCKED";
+				fuel=0.46628451;
+				placementRadius=300;
+			};
+			id=308;
+			type="B_Heli_Light_01_F";
+		};
+		class Item87
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7411.9697,99.649696,6709.2114};
+				angles[]={0.01280293,0,6.2464013};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.82029676;
+				lock="UNLOCKED";
+				fuel=0.46628451;
+				placementRadius=300;
+			};
+			id=309;
+			type="B_Heli_Light_01_F";
+			atlOffset=-0.012413025;
+		};
+		class Item88
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6351.1738,66.312561,3341.7808};
+				angles[]={6.2009721,0,0.10758245};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.82029676;
+				lock="UNLOCKED";
+				fuel=0.46628451;
+				placementRadius=300;
+			};
+			id=310;
+			type="B_Heli_Light_01_F";
+			atlOffset=0.047576904;
+		};
+		class Item89
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8050.9292,85.375137,3493.7092};
+				angles[]={6.2272439,0,0.13438509};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.82029676;
+				lock="UNLOCKED";
+				fuel=0.46628451;
+				placementRadius=300;
+			};
+			id=311;
+			type="B_Heli_Light_01_F";
+			atlOffset=-0.0062103271;
+		};
+		class Item90
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8066.3774,31.346041,10195.897};
+				angles[]={0,0,6.282495};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.82029676;
+				lock="UNLOCKED";
+				fuel=0.46628451;
+				placementRadius=300;
+			};
+			id=312;
+			type="B_Heli_Light_01_F";
+			atlOffset=-1.9073486e-006;
+		};
+		class Item91
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3543.1211,4.2242479,3289.5737};
+				angles[]={6.2591896,2.2514749,0.02399601};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.82029676;
+				lock="UNLOCKED";
+				fuel=0.46628451;
+				placementRadius=300;
+			};
+			id=313;
+			type="B_Heli_Light_01_F";
+			atlOffset=-0.00059175491;
+		};
+		class Item92
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3784.9771,285.31363,7994.0737};
+				angles[]={0.33632019,0,0.075056612};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.82029676;
+				lock="UNLOCKED";
+				fuel=0.46628451;
+				placementRadius=300;
+			};
+			id=314;
+			type="B_Heli_Light_01_F";
+			atlOffset=-0.068054199;
+		};
+		class Item93
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6765.3701,82.455208,5394.8784};
+				angles[]={0.026395066,0,6.2519951};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.82029676;
+				lock="UNLOCKED";
+				fuel=0.46628451;
+				placementRadius=300;
+			};
+			id=315;
+			type="B_Heli_Light_01_F";
+			atlOffset=-0.081092834;
+		};
+		class Item94
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9359.3105,7.656805,3775.1531};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_12""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				name="BTSD_Flag_12";
+			};
+			id=316;
+			type="Flag_Green_F";
+			atlOffset=2.3841858e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item95
+		{
+			dataType="Marker";
+			position[]={9353.873,3.6800001,3808.3542};
+			name="BTSD_Mrk_Capture_12";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=250;
+			b=250;
+			id=317;
 		};
 	};
 };

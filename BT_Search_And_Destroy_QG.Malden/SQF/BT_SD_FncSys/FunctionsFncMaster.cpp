@@ -25,5 +25,8 @@
 			class PosStartQG			{};
 			class SearchQG				{};
 			class VehicleShop			{};
+			class CaptureArea			{};
+			class BonusFlag				{};
+			class CheckVictoryCapture	{};
 
 	};

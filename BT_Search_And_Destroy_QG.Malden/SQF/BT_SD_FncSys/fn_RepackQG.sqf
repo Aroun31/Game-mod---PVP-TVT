@@ -1,3 +1,4 @@
+#include "..\..\DA3F_macros.hpp"
     /*
     *
     *       Project :
@@ -30,6 +31,7 @@
             private _BTSD_arrObj    = _BTSD_VehQG getVariable ["BTSD_ObjDeployed", []];
             private _BTSD_Id        = 0;
             private _arrUnits       = [];
+            private _BTSD_VarName   = Cfg_MissionInfo(getText,str(side player),"Name_Var_Qg");
 
 
             if (_BTSD_ClassName isEqualTo "") exitWith {
@@ -51,6 +53,7 @@
 
                     _BTSD_vehicle   = createVehicle [_BTSD_ClassName, [0, 0, 500], [], 0, "None"];
                     _BTSD_vehicle allowDamage false;
+                    _BTSD_vehicle setVehicleVarName _BTSD_VarName;
                     [_BTSD_vehicle]spawn BT_fnc_VictoryOrNot;
 
 

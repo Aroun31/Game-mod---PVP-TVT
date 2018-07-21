@@ -50,7 +50,7 @@
                     hint "Votre QG est introuvable";
                 };
 
-                _compile = format ["player setVehiclePosition [getpos %1, [], 10, ""None""];", _BTSD_QG];
+                _compile = format ["player setVehiclePosition [getpos %1, [], 20, ""None""];", _BTSD_QG];
                 /*
                 _compile = switch (side player) do {
                     case west: {format ["player setVehiclePosition [getpos %1, [], 10, ""None""];", _BTSD_NameQG_West];};

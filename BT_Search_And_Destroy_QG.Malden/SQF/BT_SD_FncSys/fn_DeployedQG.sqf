@@ -19,6 +19,7 @@
     private _BTSD_unit          = param[1, objNull, [objNull]];
     private _BTSD_ClassName     = typeOf _BTSD_VehQG;
     private _BTSD_VehRemplace   = "B_Truck_01_mover_F";
+    private _BTSD_VarName       = Cfg_MissionInfo(getText,str(side player),"Name_Var_Qg");
 
         if (isNull _BTSD_VehQG) exitWith {};
 
@@ -31,7 +32,7 @@
 
                 _BTSD_VehQG setVariable ["BTSD_Act_1", nil, true];
                 _BTSD_VehQG setVariable ["BTSD_VehCheck", false, true];
-                _BTSD_wait = ["Déploiment du QG", 0.1]spawn BT_fnc_Progress;
+                _BTSD_wait = ["Déploiment du QG", 0.2]spawn BT_fnc_Progress;
                 waitUntil {scriptDone _BTSD_wait};
                 if !(alive player) exitWith {};
 
@@ -46,6 +47,7 @@
             _BTSD_VehDepolyed setdir _BTSD_DirQG;
             _BTSD_VehDepolyed setVariable ["BTSD_SideQG", _BTSD_side, true];
             _BTSD_VehDepolyed setVariable ["BTSD_InfoVeh", [_BTSD_DmgQG,_BTSD_FuelQG], true];
+            _BTSD_VehDepolyed setVehicleVarName _BTSD_VarName;
             [_BTSD_VehDepolyed]spawn BT_fnc_VictoryOrNot;
 
                 {

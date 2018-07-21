@@ -14,6 +14,22 @@
 			JailMarker		= "BTSD_Mrk_Jail"; // Marker de prison
 			AmmoAssom[]		= {"30Rnd_9x21_Yellow_Mag"}; // Muns Assommante "B_9x21_Ball_Tracer_Yellow"
 
+			TimeCapture		= 0.45; // Temps de capture d'un drapeau
+			AllFlags[]		= {
+				"BTSD_Flag_01",
+				"BTSD_Flag_02",
+				"BTSD_Flag_03",
+				"BTSD_Flag_04",
+				"BTSD_Flag_05",
+				"BTSD_Flag_06",
+				"BTSD_Flag_07",
+				"BTSD_Flag_08",
+				"BTSD_Flag_09",
+				"BTSD_Flag_10",
+				"BTSD_Flag_11",
+				"BTSD_Flag_12"
+			}; 
+
 		};
 
 		class Defense
@@ -34,7 +50,7 @@
 		class west
 		{
 			Name_Var_Qg		= "BT_Veh_QG_West"; // Sud de l'île
-			PosStartQg[]	= {1052.75,682.681,0}; 
+			PosStartQg[]	= {{1052.75,682.681,0},{8211.73,5557.07,0},{8505.86,10468.3,0}}; 
 			BTSD_ObjBase[] 	= {
 				{"Land_RepairDepot_01_green_F", {7, -6, 0}, 45}
 			};
@@ -53,7 +69,7 @@
 		class east
 		{
 			Name_Var_Qg		= "BT_Veh_QG_East"; // Nord de l'île
-			PosStartQg[]	= {7027.9,12177.3,0};
+			PosStartQg[]	= {{7027.9,12177.3,0},{5002.75,10358.9,0},{6835.72,2744.79,0}};
 			BTSD_ObjBase[] 	= {
 				{"Land_RepairDepot_01_tan_F", {7, -6, 0}, 45}
 			};

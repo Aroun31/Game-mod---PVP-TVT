@@ -11,7 +11,7 @@ class DA3F_BarProg
 	idd 		= 180707;
 	name 		= "DA3F_BarProg";
 	Author 		= "@roun";
-   	duration 	= 15;
+   	duration 	= 300;
    	fadein 		= 0;
    	fadeout 	= 5;
    	onload		= "uinamespace setvariable [""DA3F_BarProg"",param [0, displayNull, [displayNull]]]";

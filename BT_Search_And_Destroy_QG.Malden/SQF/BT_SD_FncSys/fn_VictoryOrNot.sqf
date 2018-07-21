@@ -18,6 +18,7 @@
         private _BTSD_veh   = param[0, objNull, [objNull]];
         private _BTSD_wait  = false;
         private _check      = false;
+        private _victory    = false;
         private _BTSD_side  = _BTSD_veh getVariable ["BTSD_SideQG", sideUnknown];
 
             switch (_BTSD_side) do {
@@ -60,7 +61,7 @@
 
                     "TeamLose" remoteExecCall ["BIS_fnc_endMission", west];
                     "GoodGame" remoteExecCall ["BIS_fnc_endMission", east];
-
+                    _victory = true;
                 };
 
                 case east: {
@@ -70,6 +71,11 @@
 
                     "TeamLose" remoteExecCall ["BIS_fnc_endMission", east];
                     "GoodGame" remoteExecCall ["BIS_fnc_endMission", west];
+                    _victory = true;
                 };
             };
 
+            if (_victory) exitWith {
+                sleep 10;
+                [player,"","serverCommand ""#restart"""] remoteExecCall ["BT_fnc_execCodeTarget",-2];
+            };

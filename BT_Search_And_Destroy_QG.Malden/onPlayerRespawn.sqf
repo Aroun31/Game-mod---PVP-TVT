@@ -26,3 +26,6 @@
     player addBackpack "B_Kitbag_mcamo";
     clearBackpackCargoGlobal player;
     (unitBackpack player) setObjectTextureGlobal [0,""];
+    player allowSprint false;
+    player enableStamina FALSE;
+    player enableFatigue FALSE;
