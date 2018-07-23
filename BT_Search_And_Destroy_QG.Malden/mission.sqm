@@ -8,18 +8,18 @@ class EditorData
 	toggles=97;
 	class ItemIDProvider
 	{
-		nextID=318;
+		nextID=348;
 	};
 	class MarkerIDProvider
 	{
-		nextID=16;
+		nextID=19;
 	};
 	class Camera
 	{
-		pos[]={4990.8408,113.41688,10323.113};
-		dir[]={0.24246392,-0.5412575,0.80516094};
-		up[]={0.15607479,0.84084362,0.51828784};
-		aside[]={0.95754212,7.6639844e-007,-0.28835115};
+		pos[]={7973.0625,49.642262,9660.8301};
+		dir[]={0.83444506,-0.31991482,0.44889158};
+		up[]={0.28182471,0.94740438,0.15160878};
+		aside[]={0.47378305,3.829191e-007,-0.88071477};
 	};
 };
 binarizationWanted=0;
@@ -40,13 +40,20 @@ addons[]=
 	"A3_Signs_F_Signs_Ad",
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Structures_F_Mil_Flags",
-	"A3_Air_F_Heli_Light_01"
+	"A3_Air_F_Heli_Light_01",
+	"task_force_radio_items",
+	"A3_Boat_F_Beta_Boat_Armed_01",
+	"A3_Boat_F_Beta_Boat_Transport_01",
+	"A3_Boat_F_Gamma_Boat_Civil_01",
+	"A3_Boat_F_Exp_Boat_Transport_02",
+	"A3_Boat_F_Exp_Scooter_Transport_01",
+	"A3_Props_F_Orange_Humanitarian_Camps"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=15;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -114,6 +121,41 @@ class AddonsMetaData
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="task_force_radio_items";
+			name="task_force_radio_items";
+			author="[TF]Nkey";
+			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
+		};
+		class Item11
+		{
+			className="A3_Boat_F_Beta";
+			name="Arma 3 Beta - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="A3_Boat_F_Gamma";
+			name="Arma 3 - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item13
+		{
+			className="A3_Boat_F_Exp";
+			name="Arma 3 Apex - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item14
+		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -195,7 +237,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=96;
+		items=126;
 		class Item0
 		{
 			dataType="Group";
@@ -4020,12 +4062,12 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_01""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_01""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_01""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_10";
 			};
 			id=282;
 			type="Flag_Green_F";
-			atlOffset=0.073883057;
+			atlOffset=0.073886871;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4073,7 +4115,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_02""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_02""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_02""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_08";
 			};
 			id=286;
@@ -4125,7 +4167,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_03""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_03""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_03""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_11";
 			};
 			id=288;
@@ -4177,7 +4219,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_04""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_04""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_04""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_09";
 			};
 			id=290;
@@ -4229,7 +4271,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_05""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_05""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_05""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_06";
 			};
 			id=292;
@@ -4280,7 +4322,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_06""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_06""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_06""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_07";
 			};
 			id=294;
@@ -4331,7 +4373,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_07""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_07""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_07""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_04";
 			};
 			id=296;
@@ -4383,12 +4425,11 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_08""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_08""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_08""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_03";
 			};
 			id=298;
 			type="Flag_Green_F";
-			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4435,12 +4476,11 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_09""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_09""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_09""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_02";
 			};
 			id=300;
 			type="Flag_Green_F";
-			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4495,7 +4535,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_10""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_10""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_10""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_01";
 			};
 			id=303;
@@ -4555,12 +4595,11 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_01""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_11""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_01""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_05";
 			};
 			id=306;
 			type="Flag_Green_F";
-			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4774,12 +4813,11 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""FlagSide"", sideUnknown, true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_12""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
+				init="call{this setVariable [""FlagSide"", [sideUnknown, ""BTSD_Mrk_Capture_12""], true];" \n "this addAction [""<t color='#00FE00' size='1' >Capturer la ville<t/>"",BT_fnc_CaptureArea, [""BTSD_Mrk_Capture_12""], 9999, true, false, """", ""!(isNull _target) && (_target distance _this < 6)""]; " \n " " \n "this addAction [""<t color='#00F0E0' size='1' >Bonus<t/>"",BT_fnc_BonusFlag, [""""], 9998, true, false, """", '(!isNull _target) && (_target distance _this < 6)'];}";
 				name="BTSD_Flag_12";
 			};
 			id=316;
 			type="Flag_Green_F";
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4814,6 +4852,738 @@ class Mission
 			a=250;
 			b=250;
 			id=317;
+		};
+		class Item96
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12523.41,0,316.17966};
+			};
+			name="BTSD_TFR";
+			id=283;
+			type="tfar_ModuleTaskForceRadioEnforceUsage";
+			atlOffset=78.93322;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_password";
+					expression="_this setVariable ['radio_channel_password',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="mcfbtr";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_RiflemanRadio";
+					expression="_this setVariable ['RiflemanRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name";
+					expression="_this setVariable ['radio_channel_name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="DA3F - Live Twitch TFRActif";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_same_sw_frequencies_for_side";
+					expression="_this setVariable ['same_sw_frequencies_for_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_TeamLeaderRadio";
+					expression="_this setVariable ['TeamLeaderRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_same_lr_frequencies_for_side";
+					expression="_this setVariable ['same_lr_frequencies_for_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_terrain_interception_coefficient";
+					expression="_this setVariable ['terrain_interception_coefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				nAttributes=7;
+			};
+		};
+		class Item97
+		{
+			dataType="Marker";
+			position[]={4493.082,0,12537.052};
+			name="DA3F_BriCodeurTeam";
+			text="Mission by : Aroun / DA3F - BriCodeur Team";
+			type="mil_warning";
+			colorName="ColorRed";
+			a=0.5;
+			b=0.5;
+			id=318;
+			atlOffset=93.839516;
+		};
+		class Item98
+		{
+			dataType="Marker";
+			position[]={4603.7891,1.554,869.45203};
+			name="DA3F_BriCodeurTeam_TS";
+			text="Adresse TS :  ts3.devarma3france.fr:12517";
+			type="mil_warning";
+			colorName="ColorRed";
+			a=0.5;
+			b=0.5;
+			id=319;
+			atlOffset=62.637249;
+		};
+		class Item99
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4603.8896,3.3238735,10982.213};
+				angles[]={0,1.1868238,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.68824476;
+				ammo=0.73600811;
+				lock="UNLOCKED";
+				fuel=0.4887614;
+			};
+			id=320;
+			type="I_Boat_Armed_01_minigun_F";
+			atlOffset=25.150585;
+		};
+		class Item100
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4557.3442,1.1808079,10540.598};
+				angles[]={0,5.3756142,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=321;
+			type="I_Boat_Transport_01_F";
+			atlOffset=10.461;
+		};
+		class Item101
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4192.7163,-36.829182,10375.906};
+				angles[]={0,2.6529005,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=322;
+			type="I_Boat_Transport_01_F";
+			atlOffset=10.442471;
+		};
+		class Item102
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3920.9241,-5.1089411,9874.1357};
+				angles[]={0,4.6600294,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=323;
+			type="I_Boat_Transport_01_F";
+			atlOffset=10.458761;
+		};
+		class Item103
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4799.0225,-50.312572,11400.355};
+				angles[]={0,4.066617,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=324;
+			type="I_Boat_Transport_01_F";
+			atlOffset=10.468922;
+		};
+		class Item104
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3070.1648,7.8057833,8654.666};
+				angles[]={0,0.68067843,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=325;
+			type="I_Boat_Transport_01_F";
+			atlOffset=10.547564;
+		};
+		class Item105
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3027.2346,3.5456123,8573.7598};
+				angles[]={0,1.5533431,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=326;
+			type="I_Boat_Transport_01_F";
+			atlOffset=10.472607;
+		};
+		class Item106
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2979.3508,1.0732117,8641.457};
+				angles[]={0,4.6774826,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=327;
+			type="C_Boat_Civil_01_F";
+			atlOffset=13.354706;
+		};
+		class Item107
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3025.583,1.0345926,8750.4336};
+				angles[]={0,5.3407078,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.67981559;
+				fuel=0.75005651;
+			};
+			id=328;
+			type="C_Boat_Transport_02_F";
+			atlOffset=10.081;
+		};
+		class Item108
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3223.863,1.1919878,9631.0898};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.77253336;
+				fuel=0.37637684;
+			};
+			id=329;
+			type="C_Scooter_Transport_01_F";
+			atlOffset=45.775002;
+		};
+		class Item109
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3467.448,-45.882767,10078.971};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.77253336;
+				fuel=0.37637684;
+			};
+			id=330;
+			type="C_Scooter_Transport_01_F";
+			atlOffset=45.77298;
+		};
+		class Item110
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8708.2041,3.3026054,6079.5903};
+				angles[]={0,0.47123885,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.68824476;
+				ammo=0.73600811;
+				lock="UNLOCKED";
+				fuel=0.4887614;
+			};
+			id=331;
+			type="I_Boat_Armed_01_minigun_F";
+			atlOffset=29.481087;
+		};
+		class Item111
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8962.7998,1.2427262,5715.5};
+				angles[]={0,4.6600294,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=332;
+			type="I_Boat_Transport_01_F";
+			atlOffset=32.612228;
+		};
+		class Item112
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8795.6602,1.2427262,5351.9883};
+				angles[]={0,1.9373155,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=333;
+			type="I_Boat_Transport_01_F";
+			atlOffset=23.428822;
+		};
+		class Item113
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8919.7266,1.2427262,4794.9854};
+				angles[]={0,3.9444444,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=334;
+			type="I_Boat_Transport_01_F";
+			atlOffset=32.926128;
+		};
+		class Item114
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8556.7891,1.8801163,6640.4751};
+				angles[]={0,3.3510323,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=335;
+			type="I_Boat_Transport_01_F";
+			atlOffset=16.812;
+		};
+		class Item115
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8553.1006,1.8511162,4154.2432};
+				angles[]={0,5.5676003,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.77253336;
+				fuel=0.37637684;
+			};
+			id=336;
+			type="C_Scooter_Transport_01_F";
+			atlOffset=10.268316;
+		};
+		class Item116
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8443.0332,1.3504839,4651.855};
+				angles[]={0,5.5676003,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.77253336;
+				fuel=0.37637684;
+			};
+			id=337;
+			type="C_Scooter_Transport_01_F";
+			atlOffset=32.080475;
+		};
+		class Item117
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9077.7832,6.9955845,3316.7605};
+				angles[]={0,6.2482791,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=338;
+			type="I_Boat_Transport_01_F";
+			atlOffset=23.394615;
+		};
+		class Item118
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9098.3389,1.4896094,3227.6028};
+				angles[]={0,0.83775806,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.87929887;
+				lock="UNLOCKED";
+				fuel=0.68262523;
+			};
+			id=339;
+			type="I_Boat_Transport_01_F";
+			atlOffset=25.962286;
+		};
+		class Item119
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8981.1387,1.308815,3359.6033};
+				angles[]={0,4.625123,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				health=0.67981559;
+				fuel=0.75005651;
+			};
+			id=340;
+			type="C_Boat_Transport_02_F";
+			atlOffset=27.269159;
+		};
+		class Item120
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8413.3477,24.313993,6821.7446};
+						angles[]={0,1.3089969,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=342;
+					type="O_support_AMG_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=341;
+		};
+		class Item121
+		{
+			dataType="Marker";
+			position[]={8413.4141,24.784008,6823.1567};
+			name="marker_17";
+			type="mil_marker";
+			id=343;
+		};
+		class Item122
+		{
+			dataType="Marker";
+			position[]={8077.0117,30.441809,9715.5049};
+			name="BTSD_Mrk_Hosto";
+			text="Hôpital de guerre";
+			type="loc_Hospital";
+			id=344;
+		};
+		class Item123
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8078.2705,30.6821,9714.6357};
+				angles[]={0,0,6.2820859};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=345;
+			type="Land_Stretcher_01_olive_F";
+			atlOffset=0.00011444092;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item124
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8078.2778,30.681978,9717.1982};
+				angles[]={0,0,6.2820859};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=346;
+			type="Land_Stretcher_01_olive_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item125
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8077.3677,30.68302,9720.2881};
+				angles[]={0,4.7123895,6.2820935};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=347;
+			type="Land_Stretcher_01_olive_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

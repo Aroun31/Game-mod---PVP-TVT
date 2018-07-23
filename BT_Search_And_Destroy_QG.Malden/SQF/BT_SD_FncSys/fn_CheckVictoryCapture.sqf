@@ -27,7 +27,7 @@
             _cntFlag = count _BTSD_AllFlags;
 
             {
-                _compil = format ["%1 getVariable [""FlagSide"", sideUnknown];", _x];
+                _compil = format ["(%1 getVariable [""FlagSide"", []])param[0];", _x];
                 _side = DA3F_Compil(_compil);
                 switch (_side) do {
                     case west: {

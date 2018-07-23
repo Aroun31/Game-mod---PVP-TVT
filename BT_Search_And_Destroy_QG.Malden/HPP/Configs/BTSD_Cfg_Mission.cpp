@@ -10,11 +10,16 @@
 			BT_Img_DescSp 	= ""; // Image de description du spawn menu
 
 			// Other
-			BT_MaxVehTeam	= 10;
+			BT_CaptureRess	= (200 + (round(random 1000)));
+			BT_RessByKill	= (100 + (round(random 500)));
+			BT_MaxVehTeam	= 10;	// Max vehicules par équipe
+			BT_TimeRespawn	= 10; 	// Temps de respawn
+			HospitalMarker	= "BTSD_Mrk_Hosto"; // Marker de prison
 			JailMarker		= "BTSD_Mrk_Jail"; // Marker de prison
 			AmmoAssom[]		= {"30Rnd_9x21_Yellow_Mag"}; // Muns Assommante "B_9x21_Ball_Tracer_Yellow"
 
 			TimeCapture		= 0.45; // Temps de capture d'un drapeau
+			
 			AllFlags[]		= {
 				"BTSD_Flag_01",
 				"BTSD_Flag_02",
@@ -29,7 +34,6 @@
 				"BTSD_Flag_11",
 				"BTSD_Flag_12"
 			}; 
-
 		};
 
 		class Defense
@@ -56,13 +60,13 @@
 			};
 			// {"ClassName", "Condition"}
 			vehicles[]		= {
-				{"B_Truck_01_fuel_F", ""},
-				{"B_Truck_01_medical_F", ""},
-				{"B_MRAP_01_F", ""},
-				{"B_MRAP_01_hmg_F", ""},
-				{"B_LSV_01_armed_F", ""},
-				{"B_LSV_01_unarmed_F", ""},
-				{"B_Quadbike_01_F", ""}
+				{"B_Truck_01_fuel_F", "", 200},
+				{"B_Truck_01_medical_F", "", 250},
+				{"B_MRAP_01_F", "", 150},
+				{"B_MRAP_01_hmg_F", "", 250},
+				{"B_LSV_01_armed_F", "", 250},
+				{"B_LSV_01_unarmed_F", "", 150},
+				{"B_Quadbike_01_F", "", 100}
 			};
 		};
 
@@ -75,13 +79,13 @@
 			};
 			// {"ClassName", "Condition"}
 			vehicles[]		= {
-				{"O_MRAP_02_F", ""},
-				{"O_MRAP_02_hmg_F", ""},
-				{"O_LSV_02_unarmed_F", ""},
-				{"O_LSV_02_armed_F", ""},
-				{"O_Truck_03_medical_F", ""},
-				{"O_Truck_03_fuel_F", ""},
-				{"O_Quadbike_01_F", ""}
+				{"O_MRAP_02_F", "", 200},
+				{"O_MRAP_02_hmg_F", "", 250},
+				{"O_LSV_02_unarmed_F", "", 150},
+				{"O_LSV_02_armed_F", "", 250},
+				{"O_Truck_03_medical_F", "", 250},
+				{"O_Truck_03_fuel_F", "", 150},
+				{"O_Quadbike_01_F", "", 100}
 			};
 		};
 	};

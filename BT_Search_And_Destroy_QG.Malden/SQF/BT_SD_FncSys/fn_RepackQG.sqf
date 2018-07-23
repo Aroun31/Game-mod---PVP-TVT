@@ -18,6 +18,9 @@
     private _BTSD_VehQG = param[0, objNull, [objNull]];
     private _BTSD_unit  = param[1, objNull, [objNull]];
 
+        if (!(player isEqualTo (vehicle player))) exitWith {
+            hint "Tu ne peux pas être dans le véhicule";
+        };
         if (isNull _BTSD_VehQG) exitWith {};
 
             private _BTSD_side      = _BTSD_VehQG getVariable ["BTSD_SideQG", sideUnknown];

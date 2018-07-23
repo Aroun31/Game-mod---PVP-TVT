@@ -13,7 +13,11 @@ class CfgRemoteExec {
 
         F(BT_fnc_SelectCamps,ANYONE)
         F(BT_fnc_execCodeTarget,ANYONE)
+        F(BT_fnc_SaveLoad_Server,SERVER)
         F(BT_fnc_SelectCampsByServer,SERVER)
+        F(bis_fnc_execvm,ANYONE)
+        F(bis_fnc_reviveinitaddplayer,ANYONE)
+        F(BTS_fnc_UnitConnex,SERVER)
         F(BIS_fnc_endMission,ANYONE)
 
     };

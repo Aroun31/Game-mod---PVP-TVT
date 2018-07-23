@@ -11,8 +11,8 @@
     *
     *       File :
     *           fn_execCodeTarget.sqf
-    *
-    *       [player,_DA3F_unit,"Code No Comiled"] remoteExecCall ["BT_fnc_execCodeTarget",0];
+    *       _DA3F_Args = select 1;
+    *       [player,_DA3F_unit,"_DA3F_Args"] remoteExecCall ["BT_fnc_execCodeTarget",0];
     */
 
 

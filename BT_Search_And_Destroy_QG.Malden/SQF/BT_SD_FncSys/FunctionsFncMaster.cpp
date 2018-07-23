@@ -28,5 +28,12 @@
 			class CaptureArea			{};
 			class BonusFlag				{};
 			class CheckVictoryCapture	{};
+			class UnitKilled			{};
+			class MpKilledUnit			{};
+			class UnitRespawn			{};
+			class GetStuff				{};
+			class ressources			{};
+			class GetRessource			{};
+			class SaveLoad_Server			{};
 
 	};

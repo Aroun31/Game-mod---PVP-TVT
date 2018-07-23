@@ -35,3 +35,5 @@
 							ListVehicle lbSetValue [_idx, _prix];
 				};
 			} forEach _listVeh;
+			_ctrlTxtHead = (ctrlParent ListVehicle) displayCtrl 1000;
+			[_ctrlTxtHead]call BT_fnc_GetRessource;

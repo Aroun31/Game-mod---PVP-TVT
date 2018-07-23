@@ -39,12 +39,25 @@ ReviveBleedOutDelay = 300;
     Pour se faire, Copier/Coller les unités jouable présente pour conserver le nom de la variable qui auto incrémente
 */
 
+
+
+    //class CfgConnect_extDB
+    class CfgServer
+    {
+        DatabaseName        = "btsd_cti";   // Dans extdb-conf.ini. vous devrez avoir le même nom Exemple : [da3f_cooprp]
+        //DatabaseName      = "btsd_game_mod";  // Dans extdb-conf.ini. vous devrez avoir le même nom Exemple : [da3f_cooprp]
+        DebugMode           = 1;                //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled) // En cas de soucis
+        HeadlessSupport     = 0;                //Enable/Disable Headless client support. Default: 1 (1 = Enabled / 0 = Disabled) // Pas d'headless utilisé sur la mission
+    };
+
 class Header
 {
 	gameType = CTI; // Capture the island
 	minPlayers = 1;
 	maxPlayers = 30;
 };
+
+
 
 #include "CfgRemoteExec.hpp"
 #include "HPP\Dialogs\Include_Master.hpp"

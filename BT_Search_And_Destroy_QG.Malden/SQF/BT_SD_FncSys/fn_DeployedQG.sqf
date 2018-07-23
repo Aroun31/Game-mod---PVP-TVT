@@ -21,6 +21,9 @@
     private _BTSD_VehRemplace   = "B_Truck_01_mover_F";
     private _BTSD_VarName       = Cfg_MissionInfo(getText,str(side player),"Name_Var_Qg");
 
+        if (!(player isEqualTo (vehicle player))) exitWith {
+            hint "Tu ne peux pas être dans le véhicule";
+        };
         if (isNull _BTSD_VehQG) exitWith {};
 
             private _BTSD_DmgQG         = damage _BTSD_VehQG;
@@ -32,13 +35,16 @@
 
                 _BTSD_VehQG setVariable ["BTSD_Act_1", nil, true];
                 _BTSD_VehQG setVariable ["BTSD_VehCheck", false, true];
-                _BTSD_wait = ["Déploiment du QG", 0.2]spawn BT_fnc_Progress;
-                waitUntil {scriptDone _BTSD_wait};
-                if !(alive player) exitWith {};
+
 
                 if !([getpos _BTSD_VehQG, 30, _BTSD_VehQG] call BT_fnc_CheckSpPos) exitWith {
                     hint "Déploiment impossible !\nAucun véhicules/bâtiments ne doit être présent dans un rayon de 30 mètres";
                 };
+
+                _BTSD_wait = ["Déploiment du QG", 0.2]spawn BT_fnc_Progress;
+                waitUntil {scriptDone _BTSD_wait};
+                if !(alive player) exitWith {};
+
 
                 deleteVehicle _BTSD_VehQG;
             private _BTSD_VehDepolyed   = _BTSD_VehRemplace createVehicle [0, 0, 500];

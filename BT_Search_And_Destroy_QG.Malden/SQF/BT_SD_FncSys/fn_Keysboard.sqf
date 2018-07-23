@@ -66,6 +66,24 @@
           case 9: {
             _handled = [true]call BT_fnc_SoundVolume;
           };
+
+      // H | Holster / recall weapon. (Shift + H)
+      case 35: {
+
+          if (_shift && !_ctrl && !(currentWeapon player isEqualTo "")) then {
+              DA3F_WeaponPlayer = currentWeapon player;
+              player action ["SwitchWeapon", player, player, 100];
+              player switchCamera cameraView;
+          };
+
+          if (!_shift && _ctrl && !isNil "DA3F_WeaponPlayer" && {!(DA3F_WeaponPlayer isEqualTo "")}) then {
+              if (DA3F_WeaponPlayer in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
+                  player selectWeapon DA3F_WeaponPlayer;
+              };
+          };
+      };
+
+
     };
 
     _handled

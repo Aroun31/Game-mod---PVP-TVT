@@ -20,7 +20,7 @@
         private _BTSD_wait          = FALSE;
         private _DA3F_Mrk_Area      = _DA3F_Args param[0, "", [""]];
         private _BTSD_TimeCapture   = Cfg_MissionInfo(getNumber,"RandProps","TimeCapture");
-        private _BTSD_Side          =  _DA3F_Drapeau getVariable ["FlagSide", sideUnknown];
+        private _BTSD_Side          =  (_DA3F_Drapeau getVariable ["FlagSide", []])param[0];
         if (_BTSD_Side isEqualTo (side player)) exitWith {
             hint "Votre équipe tient déjà cette zone";
         };
@@ -36,9 +36,13 @@
         _DA3F_Mrk_Area setMarkerColor _BTSD_Colors;
         _DA3F_Mrk_Area setMarkerAlpha 0.75;
 
-        [player, _DA3F_Drapeau, "_DA3F_Args setVariable [""FlagSide"", (side _DA3F_Target), true];"] remoteExecCall ["BT_fnc_execCodeTarget",0];
-
+        [player, _DA3F_Drapeau, format["_DA3F_Args setVariable [""FlagSide"", [(side _DA3F_Target), %1], true];", _DA3F_Mrk_Area]] remoteExecCall ["BT_fnc_execCodeTarget",0];
 
         "Un zone a été capturé" remoteExecCall ["hintSilent"];
 
         []spawn BT_fnc_CheckVictoryCapture;
+
+        private _AddRessource = Cfg_MissionInfo(getNumber,"RandProps","BT_CaptureRess");
+
+        [player, _AddRessource, "add"]call BT_fnc_ressources;
+        ["save"] remoteExecCall ["BT_fnc_SaveLoad_Server", 2];

@@ -31,8 +31,6 @@
                 };
             };
 
-
-
         _BTSD_veh setVariable ["BTSD_VehCheck", true, true];
 
         waitUntil {

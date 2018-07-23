@@ -22,6 +22,7 @@
         BTSD_NrbKill    = 0;
         BTSD_NextOk     = FALSE;
         DA3F_IsAction   = FALSE;
+        DA3F_Cash       = 0;
 
         player setVariable ["BTSD_Jail", FALSE, TRUE];
         player setVariable ["BTSD_Coma", 0, FALSE];
@@ -38,4 +39,7 @@
     };
 
 
+        player addMPEventHandler ["MPKilled","_this call BT_fnc_MpKilledUnit"];
+        player addEventHandler ["Killed","_this call BT_fnc_UnitKilled"];
+        player addEventHandler ["Respawn","_this call BT_fnc_UnitRespawn"];
         BTSD_NextOk     = TRUE;

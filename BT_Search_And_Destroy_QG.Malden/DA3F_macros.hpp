@@ -23,6 +23,7 @@
     #define Cfg_A3(TYPE,Config,Class,SETTING) TYPE(ConfigFile >> Config >> Class >> SETTING)
     #define Cfg_MissionInfo(TYPE,Class,SETTING) TYPE(missionConfigFile >> "BTSD_Cfg_Mission" >> Class >> SETTING)
     #define ListeWeapons My_Ctrl(180718,1500)
-    #define ListeAmmo My_Ctrl(180718,1501)
+    #define Ressources   (group player) getVariable ["Grp_ressource", 0]
+    #define ListeAmmo    My_Ctrl(180718,1501)
     #define ListeOptics My_Ctrl(180718,1502)
     #define ListVehicle My_Ctrl(200718,1500)
