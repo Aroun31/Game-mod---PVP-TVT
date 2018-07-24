@@ -13,7 +13,7 @@
     *           DA3F_macros.hpp
     *
     *       EXEMPLES :
-    *               #include "DA3F_macros.hpp"
+    *               #include "..\..\DA3F_macros.hpp"
     *
 	*/
 
@@ -27,3 +27,18 @@
     #define ListeAmmo    My_Ctrl(180718,1501)
     #define ListeOptics My_Ctrl(180718,1502)
     #define ListVehicle My_Ctrl(200718,1500)
+
+    /*
+    Check number pos in building
+    return array of number position building
+*/
+        #define GetPosNumBuilding(BUILDING) {private _DA3F_buildingPos = [];private _DA3F_AllPosBuilding = [];\
+            if (isNull BUILDING) exitWith {[]};\
+                  for "_a" from 0 to 50 do {\
+                    _DA3F_buildingPos = BUILDING buildingpos _a;\
+                    if !(str _DA3F_buildingPos isEqualTo "[0,0,0]") then {\
+                        _DA3F_AllPosBuilding pushBack _a\
+                    };\
+                };\
+                _DA3F_AllPosBuilding\
+        }

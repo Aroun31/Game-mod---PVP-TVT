@@ -1,3 +1,4 @@
+#include "..\..\DA3F_macros.hpp"
     /*
     *
     *       Project :
@@ -16,13 +17,24 @@
 
     params ["_Flag", "_unit", "_actionId", "_arguments"];
 
-    private _BTSD_SideFlag = _Flag getVariable ["FlagSide", sideUnknown];
+    private _BTSD_SideFlag = (_Flag getVariable ["FlagSide", []])param[0];
+
     private _BTSD_SideUnit = side _unit;
 
         if !(_BTSD_SideFlag isEqualTo _BTSD_SideUnit) exitWith {
             hint "Tu ne peux pas utiliser les bonus d'une zone qui ne t'appartient pas.";
         };
+/*
+            hint "Aucun bonus n'est disponible pour le moment.\n\nIl sera possible de faire l'achat de troupe pour garder la ville capturé.\nSi tu as des idées de bonus ou souhaites participer prends contact sur le TS indiqué sur la map.\n\n\nBon jeu sur :\n\nSearch & Destroy QG";
+*/
+            disableSerialization;
+            if !(createDialog "BTSD_CaptureAction") exitWith {};
+                private _btnGardeCity       = My_Ctrl(2407182,2401);
+                private _BTSD_CoutSpUnit    = Cfg_MissionInfo(getNumber,"RandProps","RessourceSpRenf");
 
+                _btnGardeCity ctrlSetText "faire garder la ville";
+                _btnGardeCity ctrlSetTooltip format ["Coût : %1 Rsc.", _BTSD_CoutSpUnit];
+                _btnGardeCity buttonSetAction "0=[] spawn BT_fnc_SpawnBotsInCity";
 
 
     /*

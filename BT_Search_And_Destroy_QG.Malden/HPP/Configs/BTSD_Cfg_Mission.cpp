@@ -10,8 +10,9 @@
 			BT_Img_DescSp 	= ""; // Image de description du spawn menu
 
 			// Other
-			BT_CaptureRess	= (200 + (round(random 1000)));
-			BT_RessByKill	= (100 + (round(random 500)));
+			BT_CaptureRess	= (100 + (round(random 1000)));
+			BT_RessByKill	= (100 + (round(random 500))); // Ressource par kill (PVP not PVE)
+			RessourceSpRenf	= 2000; // Coût en ressources pour le spawn de garde dans une ville
 			BT_MaxVehTeam	= 10;	// Max vehicules par équipe
 			BT_TimeRespawn	= 10; 	// Temps de respawn
 			HospitalMarker	= "BTSD_Mrk_Hosto"; // Marker de prison
@@ -35,7 +36,8 @@
 				"BTSD_Flag_12"
 			}; 
 		};
-
+// Ne pas s'en occuper pour la version QG
+/*
 		class Defense
 		{
 			Mrk_Bases	= "BTSD_Mrk_Base_Defense";
@@ -50,6 +52,8 @@
 			Weapons[]	= {"hgun_Rook40_F", "arifle_MX_F", "arifle_MX_SW_Black_F", "MMG_02_sand_F", "srifle_LRR_camo_F"};
 			Optics[]	= {"optic_Holosight", "optic_AMS", "optic_Arco", "optic_ERCO_blk_F", "optic_Hamr", "optic_DMS", "optic_KHS_blk", "optic_LRPS"};				
 		};
+*/
+
 // ["className",[pos modeltoworld],dir]
 		class west
 		{
@@ -58,16 +62,26 @@
 			BTSD_ObjBase[] 	= {
 				{"Land_RepairDepot_01_green_F", {7, -6, 0}, 45}
 			};
-			// {"ClassName", "Condition"}
+			// {"ClassName", "Condition", ressource}
 			vehicles[]		= {
-				{"B_Truck_01_fuel_F", "", 200},
-				{"B_Truck_01_medical_F", "", 250},
-				{"B_MRAP_01_F", "", 150},
-				{"B_MRAP_01_hmg_F", "", 250},
-				{"B_LSV_01_armed_F", "", 250},
-				{"B_LSV_01_unarmed_F", "", 150},
-				{"B_Quadbike_01_F", "", 100}
+				{"B_Truck_01_fuel_F", "", 300},
+				{"B_Truck_01_medical_F", "", 350},
+				{"B_MRAP_01_F", "", 250},
+				{"B_MRAP_01_hmg_F", "", 350},
+				{"B_LSV_01_armed_F", "", 350},
+				{"B_LSV_01_unarmed_F", "", 250},
+				{"B_Quadbike_01_F", "", 200}
 			};
+
+			Items_Build[] = {
+			// {"ClassName", "Condition", ressource}
+				{"Land_SandbagBarricade_01_hole_F", "", 100},
+				{"Land_SandbagBarricade_01_F", "", 100},
+				{"Land_SandbagBarricade_01_half_F", "", 100},
+				{"CamoNet_INDP_big_F", "", 100},
+				{"Land_Cargo_Patrol_V2_F", "", 100},
+			};
+
 		};
 
 		class east
@@ -79,13 +93,22 @@
 			};
 			// {"ClassName", "Condition"}
 			vehicles[]		= {
-				{"O_MRAP_02_F", "", 200},
-				{"O_MRAP_02_hmg_F", "", 250},
-				{"O_LSV_02_unarmed_F", "", 150},
-				{"O_LSV_02_armed_F", "", 250},
-				{"O_Truck_03_medical_F", "", 250},
-				{"O_Truck_03_fuel_F", "", 150},
-				{"O_Quadbike_01_F", "", 100}
+				{"O_MRAP_02_F", "", 300},
+				{"O_MRAP_02_hmg_F", "", 350},
+				{"O_LSV_02_unarmed_F", "", 250},
+				{"O_LSV_02_armed_F", "", 350},
+				{"O_Truck_03_medical_F", "", 350},
+				{"O_Truck_03_fuel_F", "", 250},
+				{"O_Quadbike_01_F", "", 200}
+			};
+			
+			Items_Build[] = {
+			// {"ClassName", "Condition", ressource}
+				{"Land_SandbagBarricade_01_hole_F", "", 100},
+				{"Land_SandbagBarricade_01_F", "", 100},
+				{"Land_SandbagBarricade_01_half_F", "", 100},
+				{"CamoNet_INDP_big_F", "", 100},
+				{"Land_Cargo_Patrol_V2_F", "", 100},
 			};
 		};
 	};

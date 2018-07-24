@@ -34,6 +34,12 @@
 			deleteVehicle _corpse;
 
 		[] spawn {
+        disableSerialization;
+        sleep 0.1;
+        private _display = (findDisplay 160718);
+        if !(isNull _display) then {
+            _display closeDisplay 0;
+        };
 		sleep 1;
           if (!(currentWeapon player isEqualTo "")) then {
               DA3F_WeaponPlayer = currentWeapon player;

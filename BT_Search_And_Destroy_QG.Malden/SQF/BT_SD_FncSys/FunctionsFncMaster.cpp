@@ -34,6 +34,13 @@
 			class GetStuff				{};
 			class ressources			{};
 			class GetRessource			{};
-			class SaveLoad_Server			{};
+			class SaveLoad_Server		{};
+			class ShowInvBuildVeh		{};
+			class ValideActInvBuild		{};
+			class InfosObj				{};
+			class KeysBuild				{};
+			class SpawnBotsInCity		{};
+			class KillBots				{};
+			class QG_actionMenu			{};
 
 	};

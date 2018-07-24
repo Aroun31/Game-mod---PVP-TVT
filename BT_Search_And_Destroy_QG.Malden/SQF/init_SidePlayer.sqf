@@ -22,6 +22,7 @@
         BTSD_NrbKill    = 0;
         BTSD_NextOk     = FALSE;
         DA3F_IsAction   = FALSE;
+        BTSD_BuildActif = FALSE;
         DA3F_Cash       = 0;
 
         player setVariable ["BTSD_Jail", FALSE, TRUE];

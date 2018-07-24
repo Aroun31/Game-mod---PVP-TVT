@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7973.0625,49.642262,9660.8301};
-		dir[]={0.83444506,-0.31991482,0.44889158};
-		up[]={0.28182471,0.94740438,0.15160878};
-		aside[]={0.47378305,3.829191e-007,-0.88071477};
+		pos[]={8077.3857,34.572029,9660.3066};
+		dir[]={0.75721961,-0.22704573,-0.61256558};
+		up[]={0.1766087,0.97384602,-0.14286968};
+		aside[]={-0.62898016,4.429603e-007,-0.77751303};
 	};
 };
 binarizationWanted=0;
@@ -237,7 +237,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=126;
+		items=124;
 		class Item0
 		{
 			dataType="Group";
@@ -4067,7 +4067,7 @@ class Mission
 			};
 			id=282;
 			type="Flag_Green_F";
-			atlOffset=0.073886871;
+			atlOffset=0.073883057;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4430,6 +4430,7 @@ class Mission
 			};
 			id=298;
 			type="Flag_Green_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4481,6 +4482,7 @@ class Mission
 			};
 			id=300;
 			type="Flag_Green_F";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4600,6 +4602,7 @@ class Mission
 			};
 			id=306;
 			type="Flag_Green_F";
+			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4818,6 +4821,7 @@ class Mission
 			};
 			id=316;
 			type="Flag_Green_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5420,43 +5424,6 @@ class Mission
 		};
 		class Item120
 		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8413.3477,24.313993,6821.7446};
-						angles[]={0,1.3089969,0};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=342;
-					type="O_support_AMG_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=341;
-		};
-		class Item121
-		{
-			dataType="Marker";
-			position[]={8413.4141,24.784008,6823.1567};
-			name="marker_17";
-			type="mil_marker";
-			id=343;
-		};
-		class Item122
-		{
 			dataType="Marker";
 			position[]={8077.0117,30.441809,9715.5049};
 			name="BTSD_Mrk_Hosto";
@@ -5464,7 +5431,7 @@ class Mission
 			type="loc_Hospital";
 			id=344;
 		};
-		class Item123
+		class Item121
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5505,7 +5472,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item124
+		class Item122
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5545,7 +5512,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item125
+		class Item123
 		{
 			dataType="Object";
 			class PositionInfo

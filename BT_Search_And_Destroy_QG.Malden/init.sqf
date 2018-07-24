@@ -13,3 +13,8 @@
     *           init.sqf
     *
     */
+
+        /*
+            Finir l'inventaire build sur le véhicule
+            faire une variable pour check si le véhicule est déployé ou pas ou className
+        */

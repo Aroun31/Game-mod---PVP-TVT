@@ -2,6 +2,11 @@
     allowedTargets = TARGET; \
 };
 
+#define JIP(NAME,TARGET) class NAME { \
+    allowedTargets = TARGET; \
+    jip = 1; \
+};
+
 #define ANYONE 0
 #define CLIENT 1
 #define SERVER 2
@@ -28,7 +33,7 @@ class CfgRemoteExec {
 
         F(hint,ANYONE)
         F(hintSilent,ANYONE)
-        F(addAction,ANYONE)
+        JIP(addAction,ANYONE)
         F(systemChat,ANYONE)
         F(addHandgunItem,ANYONE)
         F(addMagazine,ANYONE)

@@ -99,7 +99,7 @@ class CfgDebriefing {
     class BackLobby {
         title = "Retour Lobby";
         subtitle = "Merci de ta visite";
-        description = "Search and Destroy <br/> retour au lobby";
+        description = "Search and Destroy QG<br/> retour au lobby";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0.8,0.25,0,1};
@@ -108,7 +108,7 @@ class CfgDebriefing {
     class GoodGame {
         title = "Félicitation";
         subtitle = "Merci de ta participation";
-        description = "Search and Destroy <br/> Fin de mission <br/><t align='right'>by: Aroun [DA3F/BriCodeur Team]<t/>";
+        description = "Search and Destroy QG<br/> Fin de mission <br/><t align='right'>by: Aroun [DA3F/BriCodeur Team]<t/>";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0.8,0.25,0,1};
@@ -117,7 +117,7 @@ class CfgDebriefing {
     class TeamLose {
         title = "QG perdu";
         subtitle = "Merci de ta participation";
-        description = "Search and Destroy <br/> Fin de mission <br/><t align='right'>by: Aroun [DA3F/BriCodeur Team]<t/>";
+        description = "Search and Destroy QG<br/> Fin de mission <br/><t align='right'>by: Aroun [DA3F/BriCodeur Team]<t/>";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0.8,0.25,0,1};
