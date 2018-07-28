@@ -30,7 +30,7 @@
 				if (_Condition) then {
 					_displayName = Cfg_A3(getText,"cfgVehicles",_className,"displayName");
 
-				_idx 	= 	ListVehicle lbAdd format ["%1 %2.$", _displayName, _prix];
+				_idx 	= 	ListVehicle lbAdd format ["%1 %2.Rsc", _displayName, _prix];
 							ListVehicle lbSetData [_idx, _className];
 							ListVehicle lbSetValue [_idx, _prix];
 				};

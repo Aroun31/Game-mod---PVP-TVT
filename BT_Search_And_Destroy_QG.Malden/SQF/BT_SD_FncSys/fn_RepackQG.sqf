@@ -41,6 +41,7 @@
                 hint "Une erreur est arrivé !  \nImpossible de repacker le QG";
             };
 
+            if (DA3F_IsAction) exitWith {};
                 _BTSD_wait = ["Replie du QG", 0.1]spawn BT_fnc_Progress;
                 waitUntil {scriptDone _BTSD_wait};
                 if !(alive player) exitWith {};
@@ -66,7 +67,7 @@
                         };
                     } forEach allUnits;
 
-                    [_BTSD_vehicle, ["<t color='#00FF00'>Déployer le QG<t/>", BT_fnc_DeployedQG]] remoteExec ["addAction", _arrUnits];
+                    [_BTSD_vehicle, ["<t color='#00FF00'>Déployer le QG<t/>", BT_fnc_DeployedQG, nil, -999, TRUE, FALSE, "", "player isEqualTo (vehicle player)"]] remoteExec ["addAction", _arrUnits, TRUE];
 
                     _BTSD_vehicle setVariable ["BTSD_SideQG", _BTSD_side, true];
                     _BTSD_vehicle setPos _BTSD_PosQG;
@@ -75,5 +76,7 @@
                     _BTSD_vehicle setFuel (_BTSD_arrInfo param[1]);
 
                     _BTSD_vehicle allowDamage true;
+
+                    DA3F_IsAction = false;
 
                     (format ["%1\n\nVient de replier le QG", name _BTSD_unit]) remoteExecCall ["hint",_BTSD_side];

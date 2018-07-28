@@ -3,6 +3,7 @@ class BTSD_VehicleShop
 	idd 	= 200718;
 	name 	= "BTSD_VehicleShop";
 	author	= "@roun";
+	onLoad	= "hint ""Double clic pour valider l'achat"" ";
 
 	class controlsBackground
 	{
@@ -53,7 +54,7 @@ class BTSD_VehicleShop
 	{
 		class ListVehicle : DA3F_RscListBox
 		{
-			onLbSelchanged 	= "";
+			onLbSelchanged 	= "_this call BT_fnc_InfosObj;";
 			onLBDblClick 	= "_this call BT_fnc_Buy_Vehicles";
 			idc = 1500;
 			x = 0.26375 * safezoneW + safezoneX;

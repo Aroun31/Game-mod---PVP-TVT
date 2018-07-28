@@ -71,5 +71,5 @@
     };
 */
      [_this]spawn BT_fnc_VictoryOrNot;
-    private _BTSD_Id = _this addAction ["<t color='#00FF00'>Déployer le QG<t/>",BT_fnc_DeployedQG];
+    private _BTSD_Id = _this addAction ["<t color='#00FF00'>Déployer le QG<t/>",BT_fnc_DeployedQG, nil, -999, TRUE, FALSE, "", "player isEqualTo (vehicle player)"];
     _this setVariable ["BTSD_Act_1", _BTSD_Id, true];

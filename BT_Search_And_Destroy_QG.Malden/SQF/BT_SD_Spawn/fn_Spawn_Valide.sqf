@@ -21,22 +21,25 @@
     private _compile        = "";
     private _BTSD_unit      = objNull;
     //private _BTSD_mrk       = (group player) getVariable ["BTSD_Camps", []];
-    private _BTSD_Mrk_Base  = []call BT_fnc_SelectCamps;
+    //private _BTSD_Mrk_Base  = []call BT_fnc_SelectCamps;
 
     private _BTSD_NameQG_West   = Cfg_MissionInfo(getText,"west","Name_Var_Qg");
     private _BTSD_NameQG_East   = Cfg_MissionInfo(getText,"east","Name_Var_Qg");
+    // Tant de commentaire ! Edit de la version S&D attaque/defense
+
     //systemChat str [_BTSD_Mrk_Base];
-    _BTSD_Mrk_Base = _BTSD_Mrk_Base param[0];
+    //_BTSD_Mrk_Base = _BTSD_Mrk_Base param[0];
 /*
         _BTSD_CheckCamps params[
             "_BTSD_Role",
             "_BTSD_Mrk_Base"
         ];
 */
-
+/*
     if (_BTSD_Mrk_Base isEqualTo "" && {!(str _BTSD_Idc isEqualTo "2402")}) exitWith {
         systemChat "Spawn introuvable"
     };
+*/
 
         switch (str _BTSD_Idc) do {
 
@@ -49,8 +52,8 @@
                 if (isNull _BTSD_QG) exitWith {
                     hint "Votre QG est introuvable";
                 };
-
-                _compile = format ["player setVehiclePosition [getpos %1, [], 20, ""None""];", _BTSD_QG];
+                    player setVehiclePosition [getpos _BTSD_QG, [], 20, "None"];
+                //_compile = format ["player setVehiclePosition [getpos %1, [], 20, ""None""];", _BTSD_QG];
                 /*
                 _compile = switch (side player) do {
                     case west: {format ["player setVehiclePosition [getpos %1, [], 10, ""None""];", _BTSD_NameQG_West];};

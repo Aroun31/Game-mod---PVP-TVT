@@ -55,7 +55,7 @@ class BTSD_Spawn
 			w = 0.34125 * safezoneW;
 			h = 0.07 * safezoneH;
 			show = false;
-			colorBackground[] = {0,0.2,0.8,0.8};
+			colorBackground[] = {0,0.2,0.8,0.2};
 		};
 
 		class BTSD_Btn_SpBase: BTSD_Btn_Model

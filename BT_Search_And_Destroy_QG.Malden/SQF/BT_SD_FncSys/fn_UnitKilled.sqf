@@ -16,13 +16,22 @@
 	*/
 
 		params ["_unit", "_killer", "_instigator", "_useEffects"];
-			systemChat format ["- %1 - | - %2 -", _unit, _killer];
+
 /*
+            systemChat format ["- %1 - | - %2 -", _unit, _killer];
             _killer setVariable ["BT_Rec_Weapons", (weapons _killer), TRUE];
             removeAllWeapons _killer;
-*/
             // _killer setDamage 1;
+*/
 
-        private _AddRessource = Cfg_MissionInfo(getNumber,"RandProps","BT_RessByKill");
+        private _AddRessource = Cfg_MissionInfo(getNumber, "RandProps", "BT_RessByKill");
+
+            if ((side _unit) isEqualTo (side _killer)) exitWith {
+                [_killer, (round(_AddRessource/2)), "del"]call BT_fnc_ressources;
+            };
+
+            if (_unit isEqualTo _killer) exitWith {
+                [_killer, (round(_AddRessource/2)), "del"]call BT_fnc_ressources;
+            };
 
         [_killer, _AddRessource, "add"]call BT_fnc_ressources;

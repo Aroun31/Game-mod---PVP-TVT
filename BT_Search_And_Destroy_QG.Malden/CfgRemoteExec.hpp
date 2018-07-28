@@ -2,6 +2,11 @@
     allowedTargets = TARGET; \
 };
 
+#define JIP(NAME,TARGET) class NAME { \
+    allowedTargets = TARGET; \
+    jip = 1; \
+};
+
 #define ANYONE 0
 #define CLIENT 1
 #define SERVER 2
@@ -15,6 +20,7 @@ class CfgRemoteExec {
         F(BT_fnc_execCodeTarget,ANYONE)
         F(BT_fnc_SaveLoad_Server,SERVER)
         F(BT_fnc_SelectCampsByServer,SERVER)
+        F(BT_fnc_msgTranslateRecu,ANYONE)
         F(bis_fnc_execvm,ANYONE)
         F(bis_fnc_reviveinitaddplayer,ANYONE)
         F(BTS_fnc_UnitConnex,SERVER)
@@ -28,7 +34,7 @@ class CfgRemoteExec {
 
         F(hint,ANYONE)
         F(hintSilent,ANYONE)
-        F(addAction,ANYONE)
+        JIP(addAction,ANYONE)
         F(systemChat,ANYONE)
         F(addHandgunItem,ANYONE)
         F(addMagazine,ANYONE)

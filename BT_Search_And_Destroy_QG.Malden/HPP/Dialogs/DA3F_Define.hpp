@@ -187,6 +187,7 @@
 		};
 
 		class DA3F_Btn_Close: DA3F_Btn {
+			text	= "X | Close";
 			color[] = {0.95,0.25,0.1,1};
 			colorFocused[] = {1,0.85,0.8,1};
 			color2[] = {0,0.85,0.2,1};

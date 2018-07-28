@@ -13,3 +13,5 @@
     *           init.sqf
     *
     */
+
+        []execVM "SQF\briefing.sqf";

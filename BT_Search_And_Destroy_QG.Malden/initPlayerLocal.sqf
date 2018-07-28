@@ -48,5 +48,4 @@
                 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call BT_fnc_Keysboard"];
             };
 
-        player addEventHandler ["HandleDamage", {_this call BT_fnc_handleDamage;}];
      //   player addEventHandler ["fired", "hint format ['%1', _this]"];

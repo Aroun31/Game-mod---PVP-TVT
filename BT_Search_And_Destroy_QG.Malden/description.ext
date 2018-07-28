@@ -1,8 +1,8 @@
 author = "[DA3F - BT] Aroun Le BriCodeur (BriCodeur Team)";
 Dev = "[DA3F - BT] Aroun Le BriCodeur (BriCodeur Team)"; // (n'est pas visible) inscript en mission.sqm
 onLoadName = "DA3F - Search and Destroy QG";
-overviewText = "Recherche et destruction du QG ennemis | Alpha v0.0.1 by BriCodeur Team";
-briefingName = "Recherche et destruction du QG ennemis | Alpha v0.0.1 by BriCodeur Team";
+overviewText = "Recherche et destruction du QG ennemis | Alpha v0.0.1 by [DA3F] Aroun Le BriCodeur";
+briefingName = "Recherche et destruction du QG ennemis | Alpha v0.0.1 by [DA3F] Aroun Le BriCodeur";
 loadScreen = "";
 onLoadMission = "<t size='.85' align = 'center' color='#D2D601'>Mission</t><br/><t size='1' align = 'center' color='#01A4D6'>Search and Destroy QG</t><br/><t size='1' align = 'center' color='#01A4D6'>développé par 'BriCodeur Team'</t>";
 // Tu ne touche pas sauf si tu sais ce que tu fais !
@@ -99,7 +99,7 @@ class CfgDebriefing {
     class BackLobby {
         title = "Retour Lobby";
         subtitle = "Merci de ta visite";
-        description = "Search and Destroy <br/> retour au lobby";
+        description = "Search and Destroy QG<br/> retour au lobby";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0.8,0.25,0,1};
@@ -108,7 +108,7 @@ class CfgDebriefing {
     class GoodGame {
         title = "Félicitation";
         subtitle = "Merci de ta participation";
-        description = "Search and Destroy <br/> Fin de mission <br/><t align='right'>by: Aroun [DA3F/BriCodeur Team]<t/>";
+        description = "Search and Destroy QG<br/> Fin de mission <br/><t align='right'>by: Aroun [DA3F/BriCodeur Team]<t/>";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0.8,0.25,0,1};
@@ -117,7 +117,7 @@ class CfgDebriefing {
     class TeamLose {
         title = "QG perdu";
         subtitle = "Merci de ta participation";
-        description = "Search and Destroy <br/> Fin de mission <br/><t align='right'>by: Aroun [DA3F/BriCodeur Team]<t/>";
+        description = "Search and Destroy QG<br/> Fin de mission <br/><t align='right'>by: Aroun [DA3F/BriCodeur Team]<t/>";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0.8,0.25,0,1};

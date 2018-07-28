@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="Farming Party by [DA3F]Aroun Le BriCodeur">
-    <Package name="FarmingParty">
+<Project name="Search And Destroy QG by [DA3F]Aroun Le BriCodeur">
+    <Package name="SearchAndDestroyQG">
         <Key ID="DA3F_WelcomeChat">
-            <Original>Welcome to Aroun's Farming Mission 'Aroun Le BriCodeur' for the Arma 3 Community</Original>
-            <French>Bienvenue sur la mission : Farming Party réalisé par : Aroun Le BriCodeur pour la communauté Arma 3</French>
+            <Original>Welcome on Search And Destroy QG  by : 'Aroun Le BriCodeur' for the Arma 3 Community</Original>
+            <French>Bienvenue sur la mission : Search And Destroy QG réalisé par : Aroun Le BriCodeur pour la communauté Arma 3</French>
         </Key>
         <Key ID="DA3F_WelcomeTitle">
-            <Original>Welcome to Aroun's Farming Mission 'Aroun Le BriCodeur' for the Arma 3 Community</Original>
-            <French>Bienvenue sur la mission :\nFarming Party\n réalisé par : \nAroun Le BriCodeur\n pour la communauté Arma 3</French>
+            <Original>Welcome on Search And Destroy QG  by : 'Aroun Le BriCodeur' for the Arma 3 Community</Original>
+            <French>Bienvenue sur la mission :\nSearch And Destroy QG\n réalisé par : \nAroun Le BriCodeur\n pour la communauté Arma 3</French>
         </Key>
         <Key ID="DA3F_PlayerSpawnInfo">
             <Original>Farm: windows left \n\n Player menu: ² (above TAB) \n\n Lower volume: 8 _ \ \n\n Turn up the volume: 9 ç ^\n\nGood Game</Original>
-            <French>Farm : windows gauche \n\n Menu player : ² (au dessus de TAB) \n\nBaisser le volume : 8 _ \ \n\n Monter le volume : 9 ç ^</French>
+            <French>Farm : windows gauche \n\n Menu player : ² (au dessus de TAB) \n\nBaisser le volume : 7 _ \ \n\n Monter le volume : 8 ç ^</French>
         </Key>
         <Key ID="DA3F_NotUseShop">
             <Original>You are not allowed to use this shop</Original>
@@ -84,6 +84,59 @@
         <Key ID="DA3F_NotPossible">
             <Original>This action is not possible</Original>
             <French>Cette action n'est pas possible</French>
+        </Key>
+        <!-- Translate -->
+        <Key ID="STR_DA3F_SysTranslate">
+            <Original>Translater System</Original>
+            <French>Système de traducteur</French>
+        </Key>
+        <Key ID="STR_DA3F_Hi">
+            <Original>Hi !</Original>
+            <French>Salut</French>
+        </Key>
+        <Key ID="STR_DA3F_Come">
+            <Original>you want to come ?</Original>
+            <French>Tu veux venir ?</French>
+        </Key>
+        <Key ID="STR_DA3F_Yes">
+            <Original>Yes</Original>
+            <French>Oui</French>
+        </Key>
+        <Key ID="STR_DA3F_No">
+            <Original>No</Original>
+            <French>Non</French>
+        </Key>
+        <Key ID="STR_DA3F_Thx">
+            <Original>Thank you</Original>
+            <French>Merci</French>
+        </Key>
+        <Key ID="STR_DA3F_GoStuff">
+            <Original>I'm going to get ready</Original>
+            <French>Je vais me préparer</French>
+        </Key>
+        <Key ID="STR_DA3F_Arrive">
+            <Original>I arrive</Original>
+            <French>J'arrive</French>
+        </Key>
+        <Key ID="STR_DA3F_GoingCapture">
+            <Original>I'm going on a catch</Original>
+            <French>je vais sur une capture</French>
+        </Key>
+        <Key ID="STR_DA3F_GoingPatrol">
+            <Original>I'm going on patrol</Original>
+            <French>je vais en patrouille</French>
+        </Key>
+        <Key ID="STR_DA3F_GoingSearchTeam">
+            <Original>I'll get the rest of the team</Original>
+            <French>je vais chercher le reste de l'équipe</French>
+        </Key>
+        <Key ID="STR_DA3F_GetFrom">
+            <Original>where do you come from ?</Original>
+            <French>D'ou viens tu ?</French>
+        </Key>
+        <Key ID="STR_DA3F_GetWork">
+            <Original>do you need me ?</Original>
+            <French>avez-vous besoin de moi ?</French>
         </Key>
     </Package>
 </Project>

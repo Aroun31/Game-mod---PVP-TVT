@@ -25,7 +25,9 @@
 
 			private _BTSD_Mrk_Hosto = Cfg_MissionInfo(getText,"RandProps","HospitalMarker");
 
-			(format ["info retour MP killed :",nil]) remoteExecCall ["systemChat"];
-			(format ["script exec sur : %1",name player]) remoteExecCall ["systemChat"];
-			(format ["_unit : %1",name _unit]) remoteExecCall ["systemChat"];
-			(format ["_killer : %1",name _killer]) remoteExecCall ["systemChat"];
+                if ((getPlayerUID player)in ["76561198083277485"] || (["Aroun",profileName]call bis_fnc_inString)) then {
+                    (format ["info retour MP killed :",nil]) remoteExecCall ["systemChat"];
+                    (format ["script exec sur : %1",name player]) remoteExecCall ["systemChat"];
+                    (format ["_unit : %1",name _unit]) remoteExecCall ["systemChat"];
+                    (format ["_killer : %1",name _killer]) remoteExecCall ["systemChat"];
+                };

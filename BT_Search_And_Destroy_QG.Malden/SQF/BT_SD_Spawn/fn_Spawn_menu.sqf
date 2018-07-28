@@ -22,6 +22,7 @@
 
         private _BTSD_BackGroundPix = Cfg_MissionInfo(getText,"RandProps","BT_Img_BackGSp"); // Image de fond
         private _BTSD_PicturDesc    = ""; // Image description (la flemme ^^)
+        private _BTSD_ColorTxt      = "#FF5F1B"; // Couleur du texte des boutons
         private _BTSD_PixDesc       = My_Ctrl(160718,1200);
     	private _BTSD_PixBackG 		= My_Ctrl(160718,1201);
     	private _BTSD_Btn_Sp_Base 	= My_Ctrl(160718,2400);
@@ -46,10 +47,10 @@
     	_BTSD_PixDesc ctrlSetText _BTSD_DescritionPix;
 
         // Base
-        _BTSD_Btn_Sp_Base ctrlSetStructuredText parseText format ["<t size='0.5'>&#160;</t><br/><img size='2' align='left' image='%1'/><t color='#FEFEFE' size='1.2' align='right' >%2<t/>",'\A3\ui_f\data\map\MapControl\taskIconDone_ca.paa', (ctrlText _BTSD_Btn_Sp_Base)];
+        _BTSD_Btn_Sp_Base ctrlSetStructuredText parseText format ["<t size='0.5'>&#160;</t><br/><img size='2' align='left' image='%1'/><t color='%3' size='1.2' align='right' >%2<t/>",'\A3\ui_f\data\map\MapControl\taskIconDone_ca.paa', "QG Mobile", _BTSD_ColorTxt];
 
         // Team
-        _BTSD_Btn_Sp_Team ctrlSetStructuredText parseText format ["<t size='0.5'>&#160;</t><br/><img size='2' align='left' image='%1'/><t color='#FEFEFE' size='2' align='right' >%2<t/>",'\A3\ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_toolbox_groups_ca.paa', (ctrlText _BTSD_Btn_Sp_Team)];
+        _BTSD_Btn_Sp_Team ctrlSetStructuredText parseText format ["<t size='0.5'>&#160;</t><br/><img size='2' align='left' image='%1'/><t color='%3' size='2' align='right' >%2<t/>",'\A3\ui_f\data\GUI\Rsc\RscDisplayArcadeMap\icon_toolbox_groups_ca.paa', (ctrlText _BTSD_Btn_Sp_Team), _BTSD_ColorTxt];
 
         // Lobby
-        _BTSD_Btn_Lobby ctrlSetStructuredText parseText format ["<t size='0.5'>&#160;</t><br/><img size='2' align='left' image='%1'/><t color='#FEFEFE' size='2' align='right' >%2<t/>",'\A3\ui_f\data\GUI\Rsc\RscDisplayMain\exit_ca.paa', (ctrlText _BTSD_Btn_Lobby)];
+        _BTSD_Btn_Lobby ctrlSetStructuredText parseText format ["<t size='0.5'>&#160;</t><br/><img size='2' align='left' image='%1'/><t color='%3' size='2' align='right' >%2<t/>",'\A3\ui_f\data\GUI\Rsc\RscDisplayMain\exit_ca.paa', (ctrlText _BTSD_Btn_Lobby), _BTSD_ColorTxt];

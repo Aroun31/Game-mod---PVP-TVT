@@ -25,7 +25,7 @@
             hint "Tu ne peux pas être dans le véhicule";
         };
         if (isNull _BTSD_VehQG) exitWith {};
-
+            if (DA3F_IsAction) exitWith {};
             private _BTSD_DmgQG         = damage _BTSD_VehQG;
             private _BTSD_FuelQG        = fuel _BTSD_VehQG;
             private _BTSD_DirQG         = getDir _BTSD_VehQG;
@@ -44,8 +44,6 @@
                 _BTSD_wait = ["Déploiment du QG", 0.2]spawn BT_fnc_Progress;
                 waitUntil {scriptDone _BTSD_wait};
                 if !(alive player) exitWith {};
-
-
                 deleteVehicle _BTSD_VehQG;
             private _BTSD_VehDepolyed   = _BTSD_VehRemplace createVehicle [0, 0, 500];
             _BTSD_VehDepolyed allowDamage false;
@@ -64,15 +62,15 @@
 
 
                 _BTSD_VehDepolyed setVariable ["BTSD_OriginalQG", _BTSD_ClassName, true];
-
+/*
                 [_BTSD_VehDepolyed, ["<t color='#00F0F0'>Arsenal<t/>", {
                     [ "Open", [ true ] ] call BIS_fnc_arsenal;
-                }]] remoteExec ["addAction", _arrUnits];
+                }]] remoteExec ["addAction", _arrUnits, TRUE];
 
-                [_BTSD_VehDepolyed, ["<t color='#F0F000'>véhicules<t/>", BT_fnc_VehicleShop]] remoteExec ["addAction", _arrUnits];
+                [_BTSD_VehDepolyed, ["<t color='#F0F000'>véhicules<t/>", BT_fnc_VehicleShop]] remoteExec ["addAction", _arrUnits, TRUE];
 
-                [_BTSD_VehDepolyed, ["<t color='#FF0000'>Replier le QG<t/>", BT_fnc_RepackQG]] remoteExec ["addAction", _arrUnits];
-
+                [_BTSD_VehDepolyed, ["<t color='#FF0000'>Replier le QG<t/>", BT_fnc_RepackQG]] remoteExec ["addAction", _arrUnits, TRUE];
+*/
     // ["className",[pos modeltoworld],dir]
     private _BTSD_ObjBase       = Cfg_MissionInfo(getArray,str(side player),"BTSD_ObjBase");
 
@@ -93,10 +91,11 @@
         _BTSD_VehDepolyed setFuel 0;
         _BTSD_VehDepolyed setVariable ["BTSD_ObjDeployed", _recObj, TRUE];
 
-    (format ["%1\n\nVient de déployer le QG", name _BTSD_unit]) remoteExecCall ["hint", _BTSD_side];
+    (format ["%1\n\nVient de déployer le QG\n\nFaites : \n "" Windows gauche "" \nface au QG pour obtenir le menu d'action", name _BTSD_unit]) remoteExecCall ["hint", _BTSD_side];
 
         ["all", _BTSD_VehDepolyed]call BT_fnc_ClearVeh;
 
+            DA3F_IsAction = false;
         _BTSD_VehDepolyed spawn {
             sleep 2;
             _this allowDamage true;

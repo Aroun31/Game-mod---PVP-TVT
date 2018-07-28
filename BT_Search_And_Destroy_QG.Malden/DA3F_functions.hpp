@@ -21,6 +21,7 @@ class BT_SD_fnc_Master
 
         #include "SQF\BT_SD_Spawn\Functions_Spawn.hpp"
         #include "SQF\BT_SD_FncSys\FunctionsFncMaster.cpp"
+        #include "SQF\DA3F_Translate\FUNCTIONS_Translate.cpp"
 
 };
     

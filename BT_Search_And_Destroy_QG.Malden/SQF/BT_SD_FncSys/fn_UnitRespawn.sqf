@@ -33,16 +33,30 @@
 			_unit setPosWorld (getMarkerPos _BTSD_Mrk_Hosto);
 			deleteVehicle _corpse;
 
-		[] spawn {
+        disableSerialization;
+        sleep 0.05;
+        private _display = (findDisplay 160718);
+        if !(isNull _display) then {
+            _display closeDisplay 0;
+        };
+
+            "" cutText ["Sortie du bloc opératoire","BLACK FADED", 1.5];
+            sleep (4 + random 3);
+
+            "" cutText ["<t color='#FEFEFE' size='1.5' align='center' >Vous voilà à l'hôpital militaire<br/>Faites appel à votre équipe pour repartir.<t/><br/><br/><t color='#FF0000' size='3' align='center' >Zone de cessé le feu<br/>!! TIR INTERDIT !!<br/><t/>", "BLACK IN", 15, TRUE, TRUE];
+
 		sleep 1;
+
           if (!(currentWeapon player isEqualTo "")) then {
               DA3F_WeaponPlayer = currentWeapon player;
               player action ["SwitchWeapon", player, player, 100];
               player switchCamera cameraView;
           };
-        };
 
-			//_unit setUnconscious true;
+        sleep 15;
+        "" cutText ["", "PLAIN", 0];
+
+        	//_unit setUnconscious true;
 			/*
 			_unit spawn {
 				sleep 10;

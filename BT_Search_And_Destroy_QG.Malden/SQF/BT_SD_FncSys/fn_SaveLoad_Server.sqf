@@ -30,7 +30,13 @@
 
 //_infos = [[capture flag], [varNameGrpWest,Count ressources grp], [varNameGrpEast,Count ressources grp]]
 
+    private _BT_LocalServerSave = profileNamespace getVariable ["BTSD_SaveServer", []];
 
+    if (_BT_LocalServerSave isEqualTo "[]") exitWith {
+        profileNamespace getVariable ["BTSD_SaveServer", []];
+    };
+
+/*
     private _type           = param[0, "", [""]];
     private _BTSD_VarName   = format ["%1_SAVE", missionName];
 
@@ -103,5 +109,5 @@
 
             };
         };
-
+*/
         //this setVariable ["FlagSide", [sideUnknown, "BTSD_Mrk_Capture_08"], true];
